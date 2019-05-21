@@ -134,8 +134,6 @@ Public Class ripartoACS
 
 
     End Sub
-
-
     Private Sub NupQTAUnitaImmobiliari_ValueChanged(sender As Object, e As EventArgs) Handles nupQTAUnitaImmobiliari.ValueChanged
 
         Try
@@ -181,7 +179,6 @@ Public Class ripartoACS
         End Try
 
     End Sub
-
     Private Sub BtnCambiaPagina_Click(sender As Object, e As EventArgs) Handles btnCambiaPagina.Click
         If btnCambiaPagina.Text = "Pagina 2" Then
             btnCambiaPagina.Text = "Pagina 1"
@@ -194,13 +191,11 @@ Public Class ripartoACS
         End If
 
     End Sub
-
     Private Sub MetroTile2_Click(sender As Object, e As EventArgs) Handles MetroTile2.Click
         mpConfigurazioneRiparto.Visible = True
         mpConfigurazioneRiparto.BringToFront()
 
     End Sub
-
     Private Sub MetroTile1_Click(sender As Object, e As EventArgs) Handles MetroTile1.Click
         mpConfigurazioneRiparto.Visible = False
 
@@ -253,7 +248,6 @@ Public Class ripartoACS
         End If
 
     End Sub
-
     Private Sub BtnTariffaFognaturaResidenti_Click(sender As Object, e As EventArgs) Handles btnTariffaFognaturaResidenti.Click
         If formTariffe.Visible = False Then
             formTariffe.Show()
@@ -272,7 +266,6 @@ Public Class ripartoACS
             formTariffe.BringToFront()
         End If
     End Sub
-
     Private Sub btnTariffaAcquedottoNonResidenti_Click(sender As Object, e As EventArgs) Handles btnTariffaAcquedottoNonResidenti.Click
         If formTariffe.Visible = False Then
             formTariffe.Show()
@@ -310,7 +303,6 @@ Public Class ripartoACS
         End If
 
     End Sub
-
     Private Sub BtnTariffaFognaturaNonResidenti_Click(sender As Object, e As EventArgs) Handles btnTariffaFognaturaNonResidenti.Click
         If formTariffe.Visible = False Then
             formTariffe.Show()
@@ -329,7 +321,6 @@ Public Class ripartoACS
             formTariffe.BringToFront()
         End If
     End Sub
-
     Private Sub MetroTile3_Click(sender As Object, e As EventArgs) Handles MetroTile3.Click
 
         Dim sommaMillesimi As Double

@@ -119,19 +119,7 @@ Partial Class ripartoACS
         Me.mpConfigurazioneRiparto = New MetroFramework.Controls.MetroPanel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.btnTariffaDepurazioneNonResidenti = New MetroFramework.Controls.MetroButton()
-        Me.btnTariffaFognaturaNonResidenti = New MetroFramework.Controls.MetroButton()
-        Me.btnTariffaAcquedottoNonResidenti = New MetroFramework.Controls.MetroButton()
-        Me.MetroLabel28 = New MetroFramework.Controls.MetroLabel()
-        Me.MetroLabel29 = New MetroFramework.Controls.MetroLabel()
-        Me.MetroLabel30 = New MetroFramework.Controls.MetroLabel()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.btnTariffaDepurazioneResidenti = New MetroFramework.Controls.MetroButton()
-        Me.btnTariffaFognaturaResidenti = New MetroFramework.Controls.MetroButton()
-        Me.btnTariffaAcquedottoResidenti = New MetroFramework.Controls.MetroButton()
-        Me.MetroLabel34 = New MetroFramework.Controls.MetroLabel()
-        Me.MetroLabel33 = New MetroFramework.Controls.MetroLabel()
-        Me.MetroLabel32 = New MetroFramework.Controls.MetroLabel()
         Me.MetroTile6 = New MetroFramework.Controls.MetroTile()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.MetroLabel99 = New MetroFramework.Controls.MetroLabel()
@@ -142,6 +130,12 @@ Partial Class ripartoACS
         Me.MetroTile5 = New MetroFramework.Controls.MetroTile()
         Me.mlStatusBar = New MetroFramework.Controls.MetroLabel()
         Me.TimerStatusbar = New System.Windows.Forms.Timer(Me.components)
+        Me.btnTariffaAcquedottoResidenti = New MetroFramework.Controls.MetroTile()
+        Me.btnTariffaFognaturaResidenti = New MetroFramework.Controls.MetroTile()
+        Me.btnTariffaDepurazioneResidenti = New MetroFramework.Controls.MetroTile()
+        Me.btnTariffaAcquedottoNonResidenti = New MetroFramework.Controls.MetroTile()
+        Me.btnTariffaFognaturaNonResidenti = New MetroFramework.Controls.MetroTile()
+        Me.btnTariffaDepurazioneNonResidenti = New MetroFramework.Controls.MetroTile()
         CType(Me.nupQTAUnitaImmobiliari, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MetroPanel1.SuspendLayout()
         Me.gbUnitaImmobiliare1.SuspendLayout()
@@ -1313,9 +1307,6 @@ Partial Class ripartoACS
         Me.GroupBox4.Controls.Add(Me.btnTariffaDepurazioneNonResidenti)
         Me.GroupBox4.Controls.Add(Me.btnTariffaFognaturaNonResidenti)
         Me.GroupBox4.Controls.Add(Me.btnTariffaAcquedottoNonResidenti)
-        Me.GroupBox4.Controls.Add(Me.MetroLabel28)
-        Me.GroupBox4.Controls.Add(Me.MetroLabel29)
-        Me.GroupBox4.Controls.Add(Me.MetroLabel30)
         Me.GroupBox4.Location = New System.Drawing.Point(6, 152)
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Size = New System.Drawing.Size(459, 100)
@@ -1323,77 +1314,11 @@ Partial Class ripartoACS
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Tariffe non residenti"
         '
-        'btnTariffaDepurazioneNonResidenti
-        '
-        Me.btnTariffaDepurazioneNonResidenti.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnTariffaDepurazioneNonResidenti.Location = New System.Drawing.Point(349, 61)
-        Me.btnTariffaDepurazioneNonResidenti.Name = "btnTariffaDepurazioneNonResidenti"
-        Me.btnTariffaDepurazioneNonResidenti.Size = New System.Drawing.Size(75, 23)
-        Me.btnTariffaDepurazioneNonResidenti.TabIndex = 1
-        Me.btnTariffaDepurazioneNonResidenti.Text = "Configura"
-        Me.btnTariffaDepurazioneNonResidenti.UseSelectable = True
-        '
-        'btnTariffaFognaturaNonResidenti
-        '
-        Me.btnTariffaFognaturaNonResidenti.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnTariffaFognaturaNonResidenti.Location = New System.Drawing.Point(230, 61)
-        Me.btnTariffaFognaturaNonResidenti.Name = "btnTariffaFognaturaNonResidenti"
-        Me.btnTariffaFognaturaNonResidenti.Size = New System.Drawing.Size(75, 23)
-        Me.btnTariffaFognaturaNonResidenti.TabIndex = 1
-        Me.btnTariffaFognaturaNonResidenti.Text = "Configura"
-        Me.btnTariffaFognaturaNonResidenti.UseSelectable = True
-        '
-        'btnTariffaAcquedottoNonResidenti
-        '
-        Me.btnTariffaAcquedottoNonResidenti.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnTariffaAcquedottoNonResidenti.Location = New System.Drawing.Point(107, 61)
-        Me.btnTariffaAcquedottoNonResidenti.Name = "btnTariffaAcquedottoNonResidenti"
-        Me.btnTariffaAcquedottoNonResidenti.Size = New System.Drawing.Size(75, 23)
-        Me.btnTariffaAcquedottoNonResidenti.TabIndex = 1
-        Me.btnTariffaAcquedottoNonResidenti.Text = "Configura"
-        Me.btnTariffaAcquedottoNonResidenti.UseSelectable = True
-        '
-        'MetroLabel28
-        '
-        Me.MetroLabel28.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.MetroLabel28.AutoSize = True
-        Me.MetroLabel28.FontSize = MetroFramework.MetroLabelSize.Small
-        Me.MetroLabel28.Location = New System.Drawing.Point(349, 26)
-        Me.MetroLabel28.Name = "MetroLabel28"
-        Me.MetroLabel28.Size = New System.Drawing.Size(71, 15)
-        Me.MetroLabel28.TabIndex = 0
-        Me.MetroLabel28.Text = "Depurazione"
-        '
-        'MetroLabel29
-        '
-        Me.MetroLabel29.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.MetroLabel29.AutoSize = True
-        Me.MetroLabel29.FontSize = MetroFramework.MetroLabelSize.Small
-        Me.MetroLabel29.Location = New System.Drawing.Point(234, 26)
-        Me.MetroLabel29.Name = "MetroLabel29"
-        Me.MetroLabel29.Size = New System.Drawing.Size(59, 15)
-        Me.MetroLabel29.TabIndex = 0
-        Me.MetroLabel29.Text = "Fognatura"
-        '
-        'MetroLabel30
-        '
-        Me.MetroLabel30.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.MetroLabel30.AutoSize = True
-        Me.MetroLabel30.FontSize = MetroFramework.MetroLabelSize.Small
-        Me.MetroLabel30.Location = New System.Drawing.Point(111, 26)
-        Me.MetroLabel30.Name = "MetroLabel30"
-        Me.MetroLabel30.Size = New System.Drawing.Size(68, 15)
-        Me.MetroLabel30.TabIndex = 0
-        Me.MetroLabel30.Text = "Acquedotto"
-        '
         'GroupBox3
         '
         Me.GroupBox3.Controls.Add(Me.btnTariffaDepurazioneResidenti)
         Me.GroupBox3.Controls.Add(Me.btnTariffaFognaturaResidenti)
         Me.GroupBox3.Controls.Add(Me.btnTariffaAcquedottoResidenti)
-        Me.GroupBox3.Controls.Add(Me.MetroLabel34)
-        Me.GroupBox3.Controls.Add(Me.MetroLabel33)
-        Me.GroupBox3.Controls.Add(Me.MetroLabel32)
         Me.GroupBox3.Location = New System.Drawing.Point(6, 29)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(459, 100)
@@ -1401,78 +1326,17 @@ Partial Class ripartoACS
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Tariffe residenti"
         '
-        'btnTariffaDepurazioneResidenti
-        '
-        Me.btnTariffaDepurazioneResidenti.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnTariffaDepurazioneResidenti.Location = New System.Drawing.Point(349, 61)
-        Me.btnTariffaDepurazioneResidenti.Name = "btnTariffaDepurazioneResidenti"
-        Me.btnTariffaDepurazioneResidenti.Size = New System.Drawing.Size(75, 23)
-        Me.btnTariffaDepurazioneResidenti.TabIndex = 1
-        Me.btnTariffaDepurazioneResidenti.Text = "Configura"
-        Me.btnTariffaDepurazioneResidenti.UseSelectable = True
-        '
-        'btnTariffaFognaturaResidenti
-        '
-        Me.btnTariffaFognaturaResidenti.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnTariffaFognaturaResidenti.Location = New System.Drawing.Point(230, 61)
-        Me.btnTariffaFognaturaResidenti.Name = "btnTariffaFognaturaResidenti"
-        Me.btnTariffaFognaturaResidenti.Size = New System.Drawing.Size(75, 23)
-        Me.btnTariffaFognaturaResidenti.TabIndex = 1
-        Me.btnTariffaFognaturaResidenti.Text = "Configura"
-        Me.btnTariffaFognaturaResidenti.UseSelectable = True
-        '
-        'btnTariffaAcquedottoResidenti
-        '
-        Me.btnTariffaAcquedottoResidenti.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnTariffaAcquedottoResidenti.Location = New System.Drawing.Point(107, 61)
-        Me.btnTariffaAcquedottoResidenti.Name = "btnTariffaAcquedottoResidenti"
-        Me.btnTariffaAcquedottoResidenti.Size = New System.Drawing.Size(75, 23)
-        Me.btnTariffaAcquedottoResidenti.TabIndex = 1
-        Me.btnTariffaAcquedottoResidenti.Text = "Configura"
-        Me.btnTariffaAcquedottoResidenti.UseSelectable = True
-        '
-        'MetroLabel34
-        '
-        Me.MetroLabel34.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.MetroLabel34.AutoSize = True
-        Me.MetroLabel34.FontSize = MetroFramework.MetroLabelSize.Small
-        Me.MetroLabel34.Location = New System.Drawing.Point(349, 26)
-        Me.MetroLabel34.Name = "MetroLabel34"
-        Me.MetroLabel34.Size = New System.Drawing.Size(71, 15)
-        Me.MetroLabel34.TabIndex = 0
-        Me.MetroLabel34.Text = "Depurazione"
-        '
-        'MetroLabel33
-        '
-        Me.MetroLabel33.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.MetroLabel33.AutoSize = True
-        Me.MetroLabel33.FontSize = MetroFramework.MetroLabelSize.Small
-        Me.MetroLabel33.Location = New System.Drawing.Point(234, 26)
-        Me.MetroLabel33.Name = "MetroLabel33"
-        Me.MetroLabel33.Size = New System.Drawing.Size(59, 15)
-        Me.MetroLabel33.TabIndex = 0
-        Me.MetroLabel33.Text = "Fognatura"
-        '
-        'MetroLabel32
-        '
-        Me.MetroLabel32.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.MetroLabel32.AutoSize = True
-        Me.MetroLabel32.FontSize = MetroFramework.MetroLabelSize.Small
-        Me.MetroLabel32.Location = New System.Drawing.Point(111, 26)
-        Me.MetroLabel32.Name = "MetroLabel32"
-        Me.MetroLabel32.Size = New System.Drawing.Size(68, 15)
-        Me.MetroLabel32.TabIndex = 0
-        Me.MetroLabel32.Text = "Acquedotto"
-        '
         'MetroTile6
         '
         Me.MetroTile6.ActiveControl = Nothing
-        Me.MetroTile6.Location = New System.Drawing.Point(6, 258)
+        Me.MetroTile6.Location = New System.Drawing.Point(6, 267)
         Me.MetroTile6.Name = "MetroTile6"
-        Me.MetroTile6.Size = New System.Drawing.Size(112, 48)
-        Me.MetroTile6.Style = MetroFramework.MetroColorStyle.Pink
+        Me.MetroTile6.Size = New System.Drawing.Size(120, 40)
+        Me.MetroTile6.Style = MetroFramework.MetroColorStyle.Magenta
         Me.MetroTile6.TabIndex = 2
-        Me.MetroTile6.Text = "Reimposta tutto"
+        Me.MetroTile6.Text = "Resetta tariffe"
+        Me.MetroTile6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.MetroTile6.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.MetroTile6.UseSelectable = True
         '
         'GroupBox2
@@ -1558,6 +1422,87 @@ Partial Class ripartoACS
         'TimerStatusbar
         '
         Me.TimerStatusbar.Interval = 15000
+        '
+        'btnTariffaAcquedottoResidenti
+        '
+        Me.btnTariffaAcquedottoResidenti.ActiveControl = Nothing
+        Me.btnTariffaAcquedottoResidenti.Location = New System.Drawing.Point(58, 34)
+        Me.btnTariffaAcquedottoResidenti.Name = "btnTariffaAcquedottoResidenti"
+        Me.btnTariffaAcquedottoResidenti.Size = New System.Drawing.Size(100, 40)
+        Me.btnTariffaAcquedottoResidenti.TabIndex = 2
+        Me.btnTariffaAcquedottoResidenti.Text = "Acquedotto"
+        Me.btnTariffaAcquedottoResidenti.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnTariffaAcquedottoResidenti.TileTextFontSize = MetroFramework.MetroTileTextSize.Small
+        Me.btnTariffaAcquedottoResidenti.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular
+        Me.btnTariffaAcquedottoResidenti.UseSelectable = True
+        '
+        'btnTariffaFognaturaResidenti
+        '
+        Me.btnTariffaFognaturaResidenti.ActiveControl = Nothing
+        Me.btnTariffaFognaturaResidenti.Location = New System.Drawing.Point(184, 34)
+        Me.btnTariffaFognaturaResidenti.Name = "btnTariffaFognaturaResidenti"
+        Me.btnTariffaFognaturaResidenti.Size = New System.Drawing.Size(100, 40)
+        Me.btnTariffaFognaturaResidenti.TabIndex = 2
+        Me.btnTariffaFognaturaResidenti.Text = "Fognatura"
+        Me.btnTariffaFognaturaResidenti.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnTariffaFognaturaResidenti.TileTextFontSize = MetroFramework.MetroTileTextSize.Small
+        Me.btnTariffaFognaturaResidenti.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular
+        Me.btnTariffaFognaturaResidenti.UseSelectable = True
+        '
+        'btnTariffaDepurazioneResidenti
+        '
+        Me.btnTariffaDepurazioneResidenti.ActiveControl = Nothing
+        Me.btnTariffaDepurazioneResidenti.Location = New System.Drawing.Point(310, 34)
+        Me.btnTariffaDepurazioneResidenti.Name = "btnTariffaDepurazioneResidenti"
+        Me.btnTariffaDepurazioneResidenti.Size = New System.Drawing.Size(100, 40)
+        Me.btnTariffaDepurazioneResidenti.TabIndex = 2
+        Me.btnTariffaDepurazioneResidenti.Text = "Depurazione"
+        Me.btnTariffaDepurazioneResidenti.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnTariffaDepurazioneResidenti.TileTextFontSize = MetroFramework.MetroTileTextSize.Small
+        Me.btnTariffaDepurazioneResidenti.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular
+        Me.btnTariffaDepurazioneResidenti.UseSelectable = True
+        '
+        'btnTariffaAcquedottoNonResidenti
+        '
+        Me.btnTariffaAcquedottoNonResidenti.ActiveControl = Nothing
+        Me.btnTariffaAcquedottoNonResidenti.Location = New System.Drawing.Point(58, 36)
+        Me.btnTariffaAcquedottoNonResidenti.Name = "btnTariffaAcquedottoNonResidenti"
+        Me.btnTariffaAcquedottoNonResidenti.Size = New System.Drawing.Size(100, 40)
+        Me.btnTariffaAcquedottoNonResidenti.Style = MetroFramework.MetroColorStyle.Brown
+        Me.btnTariffaAcquedottoNonResidenti.TabIndex = 2
+        Me.btnTariffaAcquedottoNonResidenti.Text = "Acquedotto"
+        Me.btnTariffaAcquedottoNonResidenti.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnTariffaAcquedottoNonResidenti.TileTextFontSize = MetroFramework.MetroTileTextSize.Small
+        Me.btnTariffaAcquedottoNonResidenti.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular
+        Me.btnTariffaAcquedottoNonResidenti.UseSelectable = True
+        '
+        'btnTariffaFognaturaNonResidenti
+        '
+        Me.btnTariffaFognaturaNonResidenti.ActiveControl = Nothing
+        Me.btnTariffaFognaturaNonResidenti.Location = New System.Drawing.Point(184, 36)
+        Me.btnTariffaFognaturaNonResidenti.Name = "btnTariffaFognaturaNonResidenti"
+        Me.btnTariffaFognaturaNonResidenti.Size = New System.Drawing.Size(100, 40)
+        Me.btnTariffaFognaturaNonResidenti.Style = MetroFramework.MetroColorStyle.Brown
+        Me.btnTariffaFognaturaNonResidenti.TabIndex = 2
+        Me.btnTariffaFognaturaNonResidenti.Text = "Fognatura"
+        Me.btnTariffaFognaturaNonResidenti.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnTariffaFognaturaNonResidenti.TileTextFontSize = MetroFramework.MetroTileTextSize.Small
+        Me.btnTariffaFognaturaNonResidenti.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular
+        Me.btnTariffaFognaturaNonResidenti.UseSelectable = True
+        '
+        'btnTariffaDepurazioneNonResidenti
+        '
+        Me.btnTariffaDepurazioneNonResidenti.ActiveControl = Nothing
+        Me.btnTariffaDepurazioneNonResidenti.Location = New System.Drawing.Point(310, 36)
+        Me.btnTariffaDepurazioneNonResidenti.Name = "btnTariffaDepurazioneNonResidenti"
+        Me.btnTariffaDepurazioneNonResidenti.Size = New System.Drawing.Size(100, 40)
+        Me.btnTariffaDepurazioneNonResidenti.Style = MetroFramework.MetroColorStyle.Brown
+        Me.btnTariffaDepurazioneNonResidenti.TabIndex = 2
+        Me.btnTariffaDepurazioneNonResidenti.Text = "Depurazione"
+        Me.btnTariffaDepurazioneNonResidenti.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnTariffaDepurazioneNonResidenti.TileTextFontSize = MetroFramework.MetroTileTextSize.Small
+        Me.btnTariffaDepurazioneNonResidenti.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular
+        Me.btnTariffaDepurazioneNonResidenti.UseSelectable = True
         '
         'ripartoACS
         '
@@ -1660,9 +1605,7 @@ Partial Class ripartoACS
         Me.mpConfigurazioneRiparto.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox4.ResumeLayout(False)
-        Me.GroupBox4.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
-        Me.GroupBox3.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         CType(Me.nupPercentualeConsumo, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1772,22 +1715,16 @@ Partial Class ripartoACS
     Friend WithEvents nupPercentualeMillesimi As NumericUpDown
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents GroupBox3 As GroupBox
-    Friend WithEvents btnTariffaAcquedottoResidenti As MetroFramework.Controls.MetroButton
-    Friend WithEvents MetroLabel34 As MetroFramework.Controls.MetroLabel
-    Friend WithEvents MetroLabel33 As MetroFramework.Controls.MetroLabel
-    Friend WithEvents MetroLabel32 As MetroFramework.Controls.MetroLabel
-    Friend WithEvents btnTariffaDepurazioneResidenti As MetroFramework.Controls.MetroButton
-    Friend WithEvents btnTariffaFognaturaResidenti As MetroFramework.Controls.MetroButton
     Friend WithEvents GroupBox4 As GroupBox
-    Friend WithEvents btnTariffaDepurazioneNonResidenti As MetroFramework.Controls.MetroButton
-    Friend WithEvents btnTariffaFognaturaNonResidenti As MetroFramework.Controls.MetroButton
-    Friend WithEvents btnTariffaAcquedottoNonResidenti As MetroFramework.Controls.MetroButton
-    Friend WithEvents MetroLabel28 As MetroFramework.Controls.MetroLabel
-    Friend WithEvents MetroLabel29 As MetroFramework.Controls.MetroLabel
-    Friend WithEvents MetroLabel30 As MetroFramework.Controls.MetroLabel
     Friend WithEvents MetroTile4 As MetroFramework.Controls.MetroTile
     Friend WithEvents MetroTile5 As MetroFramework.Controls.MetroTile
     Friend WithEvents mlStatusBar As MetroFramework.Controls.MetroLabel
     Friend WithEvents MetroTile6 As MetroFramework.Controls.MetroTile
     Friend WithEvents TimerStatusbar As Timer
+    Friend WithEvents btnTariffaDepurazioneNonResidenti As MetroFramework.Controls.MetroTile
+    Friend WithEvents btnTariffaFognaturaNonResidenti As MetroFramework.Controls.MetroTile
+    Friend WithEvents btnTariffaAcquedottoNonResidenti As MetroFramework.Controls.MetroTile
+    Friend WithEvents btnTariffaDepurazioneResidenti As MetroFramework.Controls.MetroTile
+    Friend WithEvents btnTariffaFognaturaResidenti As MetroFramework.Controls.MetroTile
+    Friend WithEvents btnTariffaAcquedottoResidenti As MetroFramework.Controls.MetroTile
 End Class

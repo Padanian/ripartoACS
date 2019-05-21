@@ -45,14 +45,12 @@
         End If
         Me.Close()
     End Sub
-
     Private Function sostOltrecon9999(ByVal cell As String) As String
         If cell = "Oltre" Then
             cell = "9999"
         End If
         Return cell
     End Function
-
     Private Sub frmClosing(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles MyBase.Closing
         ripartoACS.Focus()
     End Sub
