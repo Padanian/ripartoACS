@@ -27,17 +27,19 @@ Partial Class formTariffe
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.MetroGrid = New MetroFramework.Controls.MetroGrid()
-        Me.Quota_Fissa = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Tariffa = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Componente_U1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Componente_U2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Componente_U3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.MetroLabel31 = New MetroFramework.Controls.MetroLabel()
         Me.MetroLabel30 = New MetroFramework.Controls.MetroLabel()
         Me.MetroLabel29 = New MetroFramework.Controls.MetroLabel()
         Me.MetroLabel28 = New MetroFramework.Controls.MetroLabel()
         Me.RipartoACSBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.mtSalvaTariffe = New MetroFramework.Controls.MetroTile()
+        Me.daMC = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.aMC = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Quota_Fissa = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Tariffa = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Componente_U1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Componente_U2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Componente_U3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.MetroGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RipartoACSBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -61,7 +63,7 @@ Partial Class formTariffe
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.MetroGrid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.MetroGrid.ColumnHeadersHeight = 25
-        Me.MetroGrid.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Quota_Fissa, Me.Tariffa, Me.Componente_U1, Me.Componente_U2, Me.Componente_U3})
+        Me.MetroGrid.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.daMC, Me.aMC, Me.Quota_Fissa, Me.Tariffa, Me.Componente_U1, Me.Componente_U2, Me.Componente_U3})
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
@@ -73,7 +75,7 @@ Partial Class formTariffe
         Me.MetroGrid.EnableHeadersVisualStyles = False
         Me.MetroGrid.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.MetroGrid.GridColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.MetroGrid.Location = New System.Drawing.Point(198, 38)
+        Me.MetroGrid.Location = New System.Drawing.Point(176, 38)
         Me.MetroGrid.Name = "MetroGrid"
         Me.MetroGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
@@ -87,13 +89,77 @@ Partial Class formTariffe
         Me.MetroGrid.RowHeadersVisible = False
         Me.MetroGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
         Me.MetroGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.MetroGrid.Size = New System.Drawing.Size(338, 118)
+        Me.MetroGrid.Size = New System.Drawing.Size(449, 118)
         Me.MetroGrid.TabIndex = 2
+        '
+        'MetroLabel31
+        '
+        Me.MetroLabel31.AutoSize = True
+        Me.MetroLabel31.FontSize = MetroFramework.MetroLabelSize.Small
+        Me.MetroLabel31.Location = New System.Drawing.Point(103, 132)
+        Me.MetroLabel31.Name = "MetroLabel31"
+        Me.MetroLabel31.Size = New System.Drawing.Size(67, 15)
+        Me.MetroLabel31.TabIndex = 3
+        Me.MetroLabel31.Text = "Eccedenza 1"
+        '
+        'MetroLabel30
+        '
+        Me.MetroLabel30.AutoSize = True
+        Me.MetroLabel30.FontSize = MetroFramework.MetroLabelSize.Small
+        Me.MetroLabel30.Location = New System.Drawing.Point(110, 112)
+        Me.MetroLabel30.Name = "MetroLabel30"
+        Me.MetroLabel30.Size = New System.Drawing.Size(60, 15)
+        Me.MetroLabel30.TabIndex = 4
+        Me.MetroLabel30.Text = "Eccedenza"
+        '
+        'MetroLabel29
+        '
+        Me.MetroLabel29.AutoSize = True
+        Me.MetroLabel29.FontSize = MetroFramework.MetroLabelSize.Small
+        Me.MetroLabel29.Location = New System.Drawing.Point(139, 92)
+        Me.MetroLabel29.Name = "MetroLabel29"
+        Me.MetroLabel29.Size = New System.Drawing.Size(31, 15)
+        Me.MetroLabel29.TabIndex = 5
+        Me.MetroLabel29.Text = "Base"
+        '
+        'MetroLabel28
+        '
+        Me.MetroLabel28.AutoSize = True
+        Me.MetroLabel28.FontSize = MetroFramework.MetroLabelSize.Small
+        Me.MetroLabel28.Location = New System.Drawing.Point(112, 72)
+        Me.MetroLabel28.Name = "MetroLabel28"
+        Me.MetroLabel28.Size = New System.Drawing.Size(58, 15)
+        Me.MetroLabel28.TabIndex = 6
+        Me.MetroLabel28.Text = "Agevolata"
+        '
+        'mtSalvaTariffe
+        '
+        Me.mtSalvaTariffe.ActiveControl = Nothing
+        Me.mtSalvaTariffe.Location = New System.Drawing.Point(23, 80)
+        Me.mtSalvaTariffe.Name = "mtSalvaTariffe"
+        Me.mtSalvaTariffe.Size = New System.Drawing.Size(64, 64)
+        Me.mtSalvaTariffe.Style = MetroFramework.MetroColorStyle.Magenta
+        Me.mtSalvaTariffe.TabIndex = 7
+        Me.mtSalvaTariffe.Text = "Salva"
+        Me.mtSalvaTariffe.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.mtSalvaTariffe.UseSelectable = True
+        '
+        'daMC
+        '
+        Me.daMC.HeaderText = "Da mc/anno"
+        Me.daMC.Name = "daMC"
+        Me.daMC.Width = 75
+        '
+        'aMC
+        '
+        Me.aMC.HeaderText = "A mc/anno"
+        Me.aMC.Name = "aMC"
+        Me.aMC.Width = 70
         '
         'Quota_Fissa
         '
         Me.Quota_Fissa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Quota_Fissa.HeaderText = "Quota Fissa"
+        Me.Quota_Fissa.HeaderText = "Q.ta Fissa"
         Me.Quota_Fissa.Name = "Quota_Fissa"
         Me.Quota_Fissa.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.Quota_Fissa.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
@@ -130,58 +196,6 @@ Partial Class formTariffe
         Me.Componente_U3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
         Me.Componente_U3.Width = 60
         '
-        'MetroLabel31
-        '
-        Me.MetroLabel31.AutoSize = True
-        Me.MetroLabel31.FontSize = MetroFramework.MetroLabelSize.Small
-        Me.MetroLabel31.Location = New System.Drawing.Point(116, 132)
-        Me.MetroLabel31.Name = "MetroLabel31"
-        Me.MetroLabel31.Size = New System.Drawing.Size(67, 15)
-        Me.MetroLabel31.TabIndex = 3
-        Me.MetroLabel31.Text = "Eccedenza 1"
-        '
-        'MetroLabel30
-        '
-        Me.MetroLabel30.AutoSize = True
-        Me.MetroLabel30.FontSize = MetroFramework.MetroLabelSize.Small
-        Me.MetroLabel30.Location = New System.Drawing.Point(123, 112)
-        Me.MetroLabel30.Name = "MetroLabel30"
-        Me.MetroLabel30.Size = New System.Drawing.Size(60, 15)
-        Me.MetroLabel30.TabIndex = 4
-        Me.MetroLabel30.Text = "Eccedenza"
-        '
-        'MetroLabel29
-        '
-        Me.MetroLabel29.AutoSize = True
-        Me.MetroLabel29.FontSize = MetroFramework.MetroLabelSize.Small
-        Me.MetroLabel29.Location = New System.Drawing.Point(152, 92)
-        Me.MetroLabel29.Name = "MetroLabel29"
-        Me.MetroLabel29.Size = New System.Drawing.Size(31, 15)
-        Me.MetroLabel29.TabIndex = 5
-        Me.MetroLabel29.Text = "Base"
-        '
-        'MetroLabel28
-        '
-        Me.MetroLabel28.AutoSize = True
-        Me.MetroLabel28.FontSize = MetroFramework.MetroLabelSize.Small
-        Me.MetroLabel28.Location = New System.Drawing.Point(125, 72)
-        Me.MetroLabel28.Name = "MetroLabel28"
-        Me.MetroLabel28.Size = New System.Drawing.Size(58, 15)
-        Me.MetroLabel28.TabIndex = 6
-        Me.MetroLabel28.Text = "Agevolata"
-        '
-        'mtSalvaTariffe
-        '
-        Me.mtSalvaTariffe.ActiveControl = Nothing
-        Me.mtSalvaTariffe.Location = New System.Drawing.Point(23, 80)
-        Me.mtSalvaTariffe.Name = "mtSalvaTariffe"
-        Me.mtSalvaTariffe.Size = New System.Drawing.Size(64, 64)
-        Me.mtSalvaTariffe.Style = MetroFramework.MetroColorStyle.Magenta
-        Me.mtSalvaTariffe.TabIndex = 7
-        Me.mtSalvaTariffe.Text = "Salva"
-        Me.mtSalvaTariffe.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.mtSalvaTariffe.UseSelectable = True
-        '
         'formTariffe
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -211,10 +225,12 @@ Partial Class formTariffe
     Friend WithEvents MetroLabel29 As MetroFramework.Controls.MetroLabel
     Friend WithEvents MetroLabel28 As MetroFramework.Controls.MetroLabel
     Friend WithEvents RipartoACSBindingSource As BindingSource
+    Friend WithEvents mtSalvaTariffe As MetroFramework.Controls.MetroTile
+    Friend WithEvents daMC As DataGridViewTextBoxColumn
+    Friend WithEvents aMC As DataGridViewTextBoxColumn
     Friend WithEvents Quota_Fissa As DataGridViewTextBoxColumn
     Friend WithEvents Tariffa As DataGridViewTextBoxColumn
     Friend WithEvents Componente_U1 As DataGridViewTextBoxColumn
     Friend WithEvents Componente_U2 As DataGridViewTextBoxColumn
     Friend WithEvents Componente_U3 As DataGridViewTextBoxColumn
-    Friend WithEvents mtSalvaTariffe As MetroFramework.Controls.MetroTile
 End Class

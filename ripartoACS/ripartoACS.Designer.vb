@@ -23,7 +23,6 @@ Partial Class ripartoACS
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.MetroStyleExtender1 = New MetroFramework.Components.MetroStyleExtender(Me.components)
         Me.nupQTAUnitaImmobiliari = New System.Windows.Forms.NumericUpDown()
         Me.MetroPanel1 = New MetroFramework.Controls.MetroPanel()
         Me.MetroTile3 = New MetroFramework.Controls.MetroTile()
@@ -47,28 +46,28 @@ Partial Class ripartoACS
         Me.gbUnitaImmobiliare3 = New System.Windows.Forms.GroupBox()
         Me.chkResidente3 = New MetroFramework.Controls.MetroCheckBox()
         Me.MetroLabel5 = New MetroFramework.Controls.MetroLabel()
-        Me.NumericUpDown4 = New System.Windows.Forms.NumericUpDown()
+        Me.nupMillesimi3 = New System.Windows.Forms.NumericUpDown()
         Me.gbConsumo3 = New System.Windows.Forms.GroupBox()
         Me.MetroLabel6 = New MetroFramework.Controls.MetroLabel()
         Me.nupConsumo3 = New System.Windows.Forms.NumericUpDown()
         Me.gbUnitaImmobiliare4 = New System.Windows.Forms.GroupBox()
         Me.chkResidente4 = New MetroFramework.Controls.MetroCheckBox()
         Me.MetroLabel8 = New MetroFramework.Controls.MetroLabel()
-        Me.NumericUpDown6 = New System.Windows.Forms.NumericUpDown()
+        Me.nupMillesimi4 = New System.Windows.Forms.NumericUpDown()
         Me.gbConsumo4 = New System.Windows.Forms.GroupBox()
         Me.MetroLabel9 = New MetroFramework.Controls.MetroLabel()
         Me.nupConsumo4 = New System.Windows.Forms.NumericUpDown()
         Me.gbUnitaImmobiliare5 = New System.Windows.Forms.GroupBox()
         Me.chkResidente5 = New MetroFramework.Controls.MetroCheckBox()
         Me.MetroLabel10 = New MetroFramework.Controls.MetroLabel()
-        Me.NumericUpDown8 = New System.Windows.Forms.NumericUpDown()
+        Me.nupMillesimi5 = New System.Windows.Forms.NumericUpDown()
         Me.gbConsumo5 = New System.Windows.Forms.GroupBox()
         Me.MetroLabel11 = New MetroFramework.Controls.MetroLabel()
         Me.nupConsumo5 = New System.Windows.Forms.NumericUpDown()
         Me.gbUnitaImmobiliare6 = New System.Windows.Forms.GroupBox()
         Me.chkResidente6 = New MetroFramework.Controls.MetroCheckBox()
         Me.MetroLabel12 = New MetroFramework.Controls.MetroLabel()
-        Me.NumericUpDown10 = New System.Windows.Forms.NumericUpDown()
+        Me.nupMillesimi6 = New System.Windows.Forms.NumericUpDown()
         Me.gbConsumo6 = New System.Windows.Forms.GroupBox()
         Me.MetroLabel13 = New MetroFramework.Controls.MetroLabel()
         Me.nupConsumo6 = New System.Windows.Forms.NumericUpDown()
@@ -119,18 +118,6 @@ Partial Class ripartoACS
         Me.btnCambiaPagina = New MetroFramework.Controls.MetroTile()
         Me.mpConfigurazioneRiparto = New MetroFramework.Controls.MetroPanel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.btnTariffaDepurazioneResidenti = New MetroFramework.Controls.MetroButton()
-        Me.btnTariffaFognaturaResidenti = New MetroFramework.Controls.MetroButton()
-        Me.btnTariffaAcquedottoResidenti = New MetroFramework.Controls.MetroButton()
-        Me.MetroLabel34 = New MetroFramework.Controls.MetroLabel()
-        Me.MetroLabel33 = New MetroFramework.Controls.MetroLabel()
-        Me.MetroLabel32 = New MetroFramework.Controls.MetroLabel()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.MetroLabel26 = New MetroFramework.Controls.MetroLabel()
-        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
-        Me.MetroLabel27 = New MetroFramework.Controls.MetroLabel()
-        Me.NumericUpDown7 = New System.Windows.Forms.NumericUpDown()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.btnTariffaDepurazioneNonResidenti = New MetroFramework.Controls.MetroButton()
         Me.btnTariffaFognaturaNonResidenti = New MetroFramework.Controls.MetroButton()
@@ -138,6 +125,23 @@ Partial Class ripartoACS
         Me.MetroLabel28 = New MetroFramework.Controls.MetroLabel()
         Me.MetroLabel29 = New MetroFramework.Controls.MetroLabel()
         Me.MetroLabel30 = New MetroFramework.Controls.MetroLabel()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.btnTariffaDepurazioneResidenti = New MetroFramework.Controls.MetroButton()
+        Me.btnTariffaFognaturaResidenti = New MetroFramework.Controls.MetroButton()
+        Me.btnTariffaAcquedottoResidenti = New MetroFramework.Controls.MetroButton()
+        Me.MetroLabel34 = New MetroFramework.Controls.MetroLabel()
+        Me.MetroLabel33 = New MetroFramework.Controls.MetroLabel()
+        Me.MetroLabel32 = New MetroFramework.Controls.MetroLabel()
+        Me.MetroTile6 = New MetroFramework.Controls.MetroTile()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.MetroLabel99 = New MetroFramework.Controls.MetroLabel()
+        Me.nupPercentualeConsumo = New System.Windows.Forms.NumericUpDown()
+        Me.MetroLabel27 = New MetroFramework.Controls.MetroLabel()
+        Me.nupPercentualeMillesimi = New System.Windows.Forms.NumericUpDown()
+        Me.MetroTile4 = New MetroFramework.Controls.MetroTile()
+        Me.MetroTile5 = New MetroFramework.Controls.MetroTile()
+        Me.mlStatusBar = New MetroFramework.Controls.MetroLabel()
+        Me.TimerStatusbar = New System.Windows.Forms.Timer(Me.components)
         CType(Me.nupQTAUnitaImmobiliari, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MetroPanel1.SuspendLayout()
         Me.gbUnitaImmobiliare1.SuspendLayout()
@@ -149,19 +153,19 @@ Partial Class ripartoACS
         Me.gbConsumo2.SuspendLayout()
         CType(Me.nupConsumo2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gbUnitaImmobiliare3.SuspendLayout()
-        CType(Me.NumericUpDown4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nupMillesimi3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gbConsumo3.SuspendLayout()
         CType(Me.nupConsumo3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gbUnitaImmobiliare4.SuspendLayout()
-        CType(Me.NumericUpDown6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nupMillesimi4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gbConsumo4.SuspendLayout()
         CType(Me.nupConsumo4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gbUnitaImmobiliare5.SuspendLayout()
-        CType(Me.NumericUpDown8, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nupMillesimi5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gbConsumo5.SuspendLayout()
         CType(Me.nupConsumo5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gbUnitaImmobiliare6.SuspendLayout()
-        CType(Me.NumericUpDown10, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nupMillesimi6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gbConsumo6.SuspendLayout()
         CType(Me.nupConsumo6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.mpPagina1.SuspendLayout()
@@ -192,11 +196,11 @@ Partial Class ripartoACS
         CType(Me.nupMillesimi7, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.mpConfigurazioneRiparto.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
+        Me.GroupBox4.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.NumericUpDown7, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox4.SuspendLayout()
+        CType(Me.nupPercentualeConsumo, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nupPercentualeMillesimi, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'nupQTAUnitaImmobiliari
@@ -220,7 +224,7 @@ Partial Class ripartoACS
         Me.MetroPanel1.HorizontalScrollbarSize = 10
         Me.MetroPanel1.Location = New System.Drawing.Point(23, 87)
         Me.MetroPanel1.Name = "MetroPanel1"
-        Me.MetroPanel1.Size = New System.Drawing.Size(118, 354)
+        Me.MetroPanel1.Size = New System.Drawing.Size(102, 314)
         Me.MetroPanel1.TabIndex = 1
         Me.MetroPanel1.VerticalScrollbarBarColor = True
         Me.MetroPanel1.VerticalScrollbarHighlightOnWheel = False
@@ -229,23 +233,23 @@ Partial Class ripartoACS
         'MetroTile3
         '
         Me.MetroTile3.ActiveControl = Nothing
-        Me.MetroTile3.Location = New System.Drawing.Point(3, 239)
+        Me.MetroTile3.Location = New System.Drawing.Point(3, 207)
         Me.MetroTile3.Name = "MetroTile3"
-        Me.MetroTile3.Size = New System.Drawing.Size(112, 112)
+        Me.MetroTile3.Size = New System.Drawing.Size(96, 96)
         Me.MetroTile3.Style = MetroFramework.MetroColorStyle.Lime
         Me.MetroTile3.TabIndex = 2
-        Me.MetroTile3.Text = "Riparto"
+        Me.MetroTile3.Text = "Ripartisci"
         Me.MetroTile3.UseSelectable = True
         '
         'MetroTile2
         '
         Me.MetroTile2.ActiveControl = Nothing
-        Me.MetroTile2.Location = New System.Drawing.Point(3, 121)
+        Me.MetroTile2.Location = New System.Drawing.Point(3, 105)
         Me.MetroTile2.Name = "MetroTile2"
-        Me.MetroTile2.Size = New System.Drawing.Size(112, 112)
+        Me.MetroTile2.Size = New System.Drawing.Size(96, 96)
         Me.MetroTile2.Style = MetroFramework.MetroColorStyle.Green
         Me.MetroTile2.TabIndex = 2
-        Me.MetroTile2.Text = "Configurazione"
+        Me.MetroTile2.Text = "Configura"
         Me.MetroTile2.UseSelectable = True
         '
         'MetroTile1
@@ -253,7 +257,7 @@ Partial Class ripartoACS
         Me.MetroTile1.ActiveControl = Nothing
         Me.MetroTile1.Location = New System.Drawing.Point(3, 3)
         Me.MetroTile1.Name = "MetroTile1"
-        Me.MetroTile1.Size = New System.Drawing.Size(112, 112)
+        Me.MetroTile1.Size = New System.Drawing.Size(96, 96)
         Me.MetroTile1.TabIndex = 2
         Me.MetroTile1.Text = "Condominio"
         Me.MetroTile1.UseSelectable = True
@@ -304,6 +308,7 @@ Partial Class ripartoACS
         '
         'nupMillesimi1
         '
+        Me.nupMillesimi1.DecimalPlaces = 1
         Me.nupMillesimi1.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.nupMillesimi1.Location = New System.Drawing.Point(72, 18)
         Me.nupMillesimi1.Maximum = New Decimal(New Integer() {1000, 0, 0, 0})
@@ -311,7 +316,7 @@ Partial Class ripartoACS
         Me.nupMillesimi1.Name = "nupMillesimi1"
         Me.nupMillesimi1.Size = New System.Drawing.Size(56, 22)
         Me.nupMillesimi1.TabIndex = 3
-        Me.nupMillesimi1.Value = New Decimal(New Integer() {50, 0, 0, 0})
+        Me.nupMillesimi1.Value = New Decimal(New Integer() {1000, 0, 0, 0})
         '
         'gbConsumo1
         '
@@ -381,6 +386,7 @@ Partial Class ripartoACS
         '
         'nupMillesimi2
         '
+        Me.nupMillesimi2.DecimalPlaces = 1
         Me.nupMillesimi2.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.nupMillesimi2.Location = New System.Drawing.Point(72, 18)
         Me.nupMillesimi2.Maximum = New Decimal(New Integer() {1000, 0, 0, 0})
@@ -425,7 +431,7 @@ Partial Class ripartoACS
         '
         Me.gbUnitaImmobiliare3.Controls.Add(Me.chkResidente3)
         Me.gbUnitaImmobiliare3.Controls.Add(Me.MetroLabel5)
-        Me.gbUnitaImmobiliare3.Controls.Add(Me.NumericUpDown4)
+        Me.gbUnitaImmobiliare3.Controls.Add(Me.nupMillesimi3)
         Me.gbUnitaImmobiliare3.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gbUnitaImmobiliare3.Location = New System.Drawing.Point(15, 119)
         Me.gbUnitaImmobiliare3.Name = "gbUnitaImmobiliare3"
@@ -457,16 +463,17 @@ Partial Class ripartoACS
         Me.MetroLabel5.TabIndex = 4
         Me.MetroLabel5.Text = "Millesimi"
         '
-        'NumericUpDown4
+        'nupMillesimi3
         '
-        Me.NumericUpDown4.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NumericUpDown4.Location = New System.Drawing.Point(72, 18)
-        Me.NumericUpDown4.Maximum = New Decimal(New Integer() {1000, 0, 0, 0})
-        Me.NumericUpDown4.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
-        Me.NumericUpDown4.Name = "NumericUpDown4"
-        Me.NumericUpDown4.Size = New System.Drawing.Size(56, 22)
-        Me.NumericUpDown4.TabIndex = 3
-        Me.NumericUpDown4.Value = New Decimal(New Integer() {50, 0, 0, 0})
+        Me.nupMillesimi3.DecimalPlaces = 1
+        Me.nupMillesimi3.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.nupMillesimi3.Location = New System.Drawing.Point(72, 18)
+        Me.nupMillesimi3.Maximum = New Decimal(New Integer() {1000, 0, 0, 0})
+        Me.nupMillesimi3.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.nupMillesimi3.Name = "nupMillesimi3"
+        Me.nupMillesimi3.Size = New System.Drawing.Size(56, 22)
+        Me.nupMillesimi3.TabIndex = 3
+        Me.nupMillesimi3.Value = New Decimal(New Integer() {50, 0, 0, 0})
         '
         'gbConsumo3
         '
@@ -503,7 +510,7 @@ Partial Class ripartoACS
         '
         Me.gbUnitaImmobiliare4.Controls.Add(Me.chkResidente4)
         Me.gbUnitaImmobiliare4.Controls.Add(Me.MetroLabel8)
-        Me.gbUnitaImmobiliare4.Controls.Add(Me.NumericUpDown6)
+        Me.gbUnitaImmobiliare4.Controls.Add(Me.nupMillesimi4)
         Me.gbUnitaImmobiliare4.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gbUnitaImmobiliare4.Location = New System.Drawing.Point(15, 175)
         Me.gbUnitaImmobiliare4.Name = "gbUnitaImmobiliare4"
@@ -535,16 +542,17 @@ Partial Class ripartoACS
         Me.MetroLabel8.TabIndex = 4
         Me.MetroLabel8.Text = "Millesimi"
         '
-        'NumericUpDown6
+        'nupMillesimi4
         '
-        Me.NumericUpDown6.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NumericUpDown6.Location = New System.Drawing.Point(72, 18)
-        Me.NumericUpDown6.Maximum = New Decimal(New Integer() {1000, 0, 0, 0})
-        Me.NumericUpDown6.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
-        Me.NumericUpDown6.Name = "NumericUpDown6"
-        Me.NumericUpDown6.Size = New System.Drawing.Size(56, 22)
-        Me.NumericUpDown6.TabIndex = 3
-        Me.NumericUpDown6.Value = New Decimal(New Integer() {50, 0, 0, 0})
+        Me.nupMillesimi4.DecimalPlaces = 1
+        Me.nupMillesimi4.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.nupMillesimi4.Location = New System.Drawing.Point(72, 18)
+        Me.nupMillesimi4.Maximum = New Decimal(New Integer() {1000, 0, 0, 0})
+        Me.nupMillesimi4.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.nupMillesimi4.Name = "nupMillesimi4"
+        Me.nupMillesimi4.Size = New System.Drawing.Size(56, 22)
+        Me.nupMillesimi4.TabIndex = 3
+        Me.nupMillesimi4.Value = New Decimal(New Integer() {50, 0, 0, 0})
         '
         'gbConsumo4
         '
@@ -581,7 +589,7 @@ Partial Class ripartoACS
         '
         Me.gbUnitaImmobiliare5.Controls.Add(Me.chkResidente5)
         Me.gbUnitaImmobiliare5.Controls.Add(Me.MetroLabel10)
-        Me.gbUnitaImmobiliare5.Controls.Add(Me.NumericUpDown8)
+        Me.gbUnitaImmobiliare5.Controls.Add(Me.nupMillesimi5)
         Me.gbUnitaImmobiliare5.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gbUnitaImmobiliare5.Location = New System.Drawing.Point(15, 231)
         Me.gbUnitaImmobiliare5.Name = "gbUnitaImmobiliare5"
@@ -613,16 +621,17 @@ Partial Class ripartoACS
         Me.MetroLabel10.TabIndex = 4
         Me.MetroLabel10.Text = "Millesimi"
         '
-        'NumericUpDown8
+        'nupMillesimi5
         '
-        Me.NumericUpDown8.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NumericUpDown8.Location = New System.Drawing.Point(72, 18)
-        Me.NumericUpDown8.Maximum = New Decimal(New Integer() {1000, 0, 0, 0})
-        Me.NumericUpDown8.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
-        Me.NumericUpDown8.Name = "NumericUpDown8"
-        Me.NumericUpDown8.Size = New System.Drawing.Size(56, 22)
-        Me.NumericUpDown8.TabIndex = 3
-        Me.NumericUpDown8.Value = New Decimal(New Integer() {50, 0, 0, 0})
+        Me.nupMillesimi5.DecimalPlaces = 1
+        Me.nupMillesimi5.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.nupMillesimi5.Location = New System.Drawing.Point(72, 18)
+        Me.nupMillesimi5.Maximum = New Decimal(New Integer() {1000, 0, 0, 0})
+        Me.nupMillesimi5.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.nupMillesimi5.Name = "nupMillesimi5"
+        Me.nupMillesimi5.Size = New System.Drawing.Size(56, 22)
+        Me.nupMillesimi5.TabIndex = 3
+        Me.nupMillesimi5.Value = New Decimal(New Integer() {50, 0, 0, 0})
         '
         'gbConsumo5
         '
@@ -659,7 +668,7 @@ Partial Class ripartoACS
         '
         Me.gbUnitaImmobiliare6.Controls.Add(Me.chkResidente6)
         Me.gbUnitaImmobiliare6.Controls.Add(Me.MetroLabel12)
-        Me.gbUnitaImmobiliare6.Controls.Add(Me.NumericUpDown10)
+        Me.gbUnitaImmobiliare6.Controls.Add(Me.nupMillesimi6)
         Me.gbUnitaImmobiliare6.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gbUnitaImmobiliare6.Location = New System.Drawing.Point(15, 287)
         Me.gbUnitaImmobiliare6.Name = "gbUnitaImmobiliare6"
@@ -691,16 +700,17 @@ Partial Class ripartoACS
         Me.MetroLabel12.TabIndex = 4
         Me.MetroLabel12.Text = "Millesimi"
         '
-        'NumericUpDown10
+        'nupMillesimi6
         '
-        Me.NumericUpDown10.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NumericUpDown10.Location = New System.Drawing.Point(72, 18)
-        Me.NumericUpDown10.Maximum = New Decimal(New Integer() {1000, 0, 0, 0})
-        Me.NumericUpDown10.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
-        Me.NumericUpDown10.Name = "NumericUpDown10"
-        Me.NumericUpDown10.Size = New System.Drawing.Size(56, 22)
-        Me.NumericUpDown10.TabIndex = 3
-        Me.NumericUpDown10.Value = New Decimal(New Integer() {50, 0, 0, 0})
+        Me.nupMillesimi6.DecimalPlaces = 1
+        Me.nupMillesimi6.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.nupMillesimi6.Location = New System.Drawing.Point(72, 18)
+        Me.nupMillesimi6.Maximum = New Decimal(New Integer() {1000, 0, 0, 0})
+        Me.nupMillesimi6.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.nupMillesimi6.Name = "nupMillesimi6"
+        Me.nupMillesimi6.Size = New System.Drawing.Size(56, 22)
+        Me.nupMillesimi6.TabIndex = 3
+        Me.nupMillesimi6.Value = New Decimal(New Integer() {50, 0, 0, 0})
         '
         'gbConsumo6
         '
@@ -1007,6 +1017,7 @@ Partial Class ripartoACS
         '
         'nupMillesimi12
         '
+        Me.nupMillesimi12.DecimalPlaces = 1
         Me.nupMillesimi12.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.nupMillesimi12.Location = New System.Drawing.Point(72, 18)
         Me.nupMillesimi12.Maximum = New Decimal(New Integer() {1000, 0, 0, 0})
@@ -1054,6 +1065,7 @@ Partial Class ripartoACS
         '
         'nupMillesimi11
         '
+        Me.nupMillesimi11.DecimalPlaces = 1
         Me.nupMillesimi11.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.nupMillesimi11.Location = New System.Drawing.Point(72, 18)
         Me.nupMillesimi11.Maximum = New Decimal(New Integer() {1000, 0, 0, 0})
@@ -1101,6 +1113,7 @@ Partial Class ripartoACS
         '
         'nupMillesimi10
         '
+        Me.nupMillesimi10.DecimalPlaces = 1
         Me.nupMillesimi10.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.nupMillesimi10.Location = New System.Drawing.Point(72, 18)
         Me.nupMillesimi10.Maximum = New Decimal(New Integer() {1000, 0, 0, 0})
@@ -1148,6 +1161,7 @@ Partial Class ripartoACS
         '
         'nupMillesimi9
         '
+        Me.nupMillesimi9.DecimalPlaces = 1
         Me.nupMillesimi9.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.nupMillesimi9.Location = New System.Drawing.Point(72, 18)
         Me.nupMillesimi9.Maximum = New Decimal(New Integer() {1000, 0, 0, 0})
@@ -1195,6 +1209,7 @@ Partial Class ripartoACS
         '
         'nupMillesimi8
         '
+        Me.nupMillesimi8.DecimalPlaces = 1
         Me.nupMillesimi8.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.nupMillesimi8.Location = New System.Drawing.Point(72, 18)
         Me.nupMillesimi8.Maximum = New Decimal(New Integer() {1000, 0, 0, 0})
@@ -1241,6 +1256,7 @@ Partial Class ripartoACS
         '
         'nupMillesimi7
         '
+        Me.nupMillesimi7.DecimalPlaces = 1
         Me.nupMillesimi7.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.nupMillesimi7.Location = New System.Drawing.Point(72, 18)
         Me.nupMillesimi7.Maximum = New Decimal(New Integer() {1000, 0, 0, 0})
@@ -1283,141 +1299,14 @@ Partial Class ripartoACS
         '
         Me.GroupBox1.Controls.Add(Me.GroupBox4)
         Me.GroupBox1.Controls.Add(Me.GroupBox3)
+        Me.GroupBox1.Controls.Add(Me.MetroTile6)
         Me.GroupBox1.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(3, 94)
+        Me.GroupBox1.Location = New System.Drawing.Point(3, 80)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(471, 296)
+        Me.GroupBox1.Size = New System.Drawing.Size(471, 313)
         Me.GroupBox1.TabIndex = 5
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Riparto ARERA 2018"
-        '
-        'GroupBox3
-        '
-        Me.GroupBox3.Controls.Add(Me.btnTariffaDepurazioneResidenti)
-        Me.GroupBox3.Controls.Add(Me.btnTariffaFognaturaResidenti)
-        Me.GroupBox3.Controls.Add(Me.btnTariffaAcquedottoResidenti)
-        Me.GroupBox3.Controls.Add(Me.MetroLabel34)
-        Me.GroupBox3.Controls.Add(Me.MetroLabel33)
-        Me.GroupBox3.Controls.Add(Me.MetroLabel32)
-        Me.GroupBox3.Location = New System.Drawing.Point(6, 29)
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(459, 100)
-        Me.GroupBox3.TabIndex = 0
-        Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "Tariffe residenti"
-        '
-        'btnTariffaDepurazioneResidenti
-        '
-        Me.btnTariffaDepurazioneResidenti.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnTariffaDepurazioneResidenti.Location = New System.Drawing.Point(349, 61)
-        Me.btnTariffaDepurazioneResidenti.Name = "btnTariffaDepurazioneResidenti"
-        Me.btnTariffaDepurazioneResidenti.Size = New System.Drawing.Size(75, 23)
-        Me.btnTariffaDepurazioneResidenti.TabIndex = 1
-        Me.btnTariffaDepurazioneResidenti.Text = "Configura"
-        Me.btnTariffaDepurazioneResidenti.UseSelectable = True
-        '
-        'btnTariffaFognaturaResidenti
-        '
-        Me.btnTariffaFognaturaResidenti.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnTariffaFognaturaResidenti.Location = New System.Drawing.Point(230, 61)
-        Me.btnTariffaFognaturaResidenti.Name = "btnTariffaFognaturaResidenti"
-        Me.btnTariffaFognaturaResidenti.Size = New System.Drawing.Size(75, 23)
-        Me.btnTariffaFognaturaResidenti.TabIndex = 1
-        Me.btnTariffaFognaturaResidenti.Text = "Configura"
-        Me.btnTariffaFognaturaResidenti.UseSelectable = True
-        '
-        'btnTariffaAcquedottoResidenti
-        '
-        Me.btnTariffaAcquedottoResidenti.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnTariffaAcquedottoResidenti.Location = New System.Drawing.Point(107, 61)
-        Me.btnTariffaAcquedottoResidenti.Name = "btnTariffaAcquedottoResidenti"
-        Me.btnTariffaAcquedottoResidenti.Size = New System.Drawing.Size(75, 23)
-        Me.btnTariffaAcquedottoResidenti.TabIndex = 1
-        Me.btnTariffaAcquedottoResidenti.Text = "Configura"
-        Me.btnTariffaAcquedottoResidenti.UseSelectable = True
-        '
-        'MetroLabel34
-        '
-        Me.MetroLabel34.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.MetroLabel34.AutoSize = True
-        Me.MetroLabel34.FontSize = MetroFramework.MetroLabelSize.Small
-        Me.MetroLabel34.Location = New System.Drawing.Point(349, 26)
-        Me.MetroLabel34.Name = "MetroLabel34"
-        Me.MetroLabel34.Size = New System.Drawing.Size(71, 15)
-        Me.MetroLabel34.TabIndex = 0
-        Me.MetroLabel34.Text = "Depurazione"
-        '
-        'MetroLabel33
-        '
-        Me.MetroLabel33.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.MetroLabel33.AutoSize = True
-        Me.MetroLabel33.FontSize = MetroFramework.MetroLabelSize.Small
-        Me.MetroLabel33.Location = New System.Drawing.Point(234, 26)
-        Me.MetroLabel33.Name = "MetroLabel33"
-        Me.MetroLabel33.Size = New System.Drawing.Size(59, 15)
-        Me.MetroLabel33.TabIndex = 0
-        Me.MetroLabel33.Text = "Fognatura"
-        '
-        'MetroLabel32
-        '
-        Me.MetroLabel32.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.MetroLabel32.AutoSize = True
-        Me.MetroLabel32.FontSize = MetroFramework.MetroLabelSize.Small
-        Me.MetroLabel32.Location = New System.Drawing.Point(111, 26)
-        Me.MetroLabel32.Name = "MetroLabel32"
-        Me.MetroLabel32.Size = New System.Drawing.Size(68, 15)
-        Me.MetroLabel32.TabIndex = 0
-        Me.MetroLabel32.Text = "Acquedotto"
-        '
-        'GroupBox2
-        '
-        Me.GroupBox2.Controls.Add(Me.MetroLabel26)
-        Me.GroupBox2.Controls.Add(Me.NumericUpDown1)
-        Me.GroupBox2.Controls.Add(Me.MetroLabel27)
-        Me.GroupBox2.Controls.Add(Me.NumericUpDown7)
-        Me.GroupBox2.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(3, 22)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(471, 50)
-        Me.GroupBox2.TabIndex = 5
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Riparto a millesimi"
-        '
-        'MetroLabel26
-        '
-        Me.MetroLabel26.AutoSize = True
-        Me.MetroLabel26.Location = New System.Drawing.Point(216, 18)
-        Me.MetroLabel26.Name = "MetroLabel26"
-        Me.MetroLabel26.Size = New System.Drawing.Size(105, 19)
-        Me.MetroLabel26.TabIndex = 4
-        Me.MetroLabel26.Text = "Perc. a consumo"
-        '
-        'NumericUpDown1
-        '
-        Me.NumericUpDown1.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NumericUpDown1.Location = New System.Drawing.Point(324, 18)
-        Me.NumericUpDown1.Name = "NumericUpDown1"
-        Me.NumericUpDown1.Size = New System.Drawing.Size(56, 22)
-        Me.NumericUpDown1.TabIndex = 3
-        Me.NumericUpDown1.Value = New Decimal(New Integer() {70, 0, 0, 0})
-        '
-        'MetroLabel27
-        '
-        Me.MetroLabel27.AutoSize = True
-        Me.MetroLabel27.Location = New System.Drawing.Point(40, 18)
-        Me.MetroLabel27.Name = "MetroLabel27"
-        Me.MetroLabel27.Size = New System.Drawing.Size(103, 19)
-        Me.MetroLabel27.TabIndex = 4
-        Me.MetroLabel27.Text = "Perc. a millesimi"
-        '
-        'NumericUpDown7
-        '
-        Me.NumericUpDown7.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NumericUpDown7.Location = New System.Drawing.Point(146, 18)
-        Me.NumericUpDown7.Name = "NumericUpDown7"
-        Me.NumericUpDown7.Size = New System.Drawing.Size(56, 22)
-        Me.NumericUpDown7.TabIndex = 3
-        Me.NumericUpDown7.Value = New Decimal(New Integer() {30, 0, 0, 0})
         '
         'GroupBox4
         '
@@ -1497,11 +1386,187 @@ Partial Class ripartoACS
         Me.MetroLabel30.TabIndex = 0
         Me.MetroLabel30.Text = "Acquedotto"
         '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.btnTariffaDepurazioneResidenti)
+        Me.GroupBox3.Controls.Add(Me.btnTariffaFognaturaResidenti)
+        Me.GroupBox3.Controls.Add(Me.btnTariffaAcquedottoResidenti)
+        Me.GroupBox3.Controls.Add(Me.MetroLabel34)
+        Me.GroupBox3.Controls.Add(Me.MetroLabel33)
+        Me.GroupBox3.Controls.Add(Me.MetroLabel32)
+        Me.GroupBox3.Location = New System.Drawing.Point(6, 29)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(459, 100)
+        Me.GroupBox3.TabIndex = 0
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "Tariffe residenti"
+        '
+        'btnTariffaDepurazioneResidenti
+        '
+        Me.btnTariffaDepurazioneResidenti.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnTariffaDepurazioneResidenti.Location = New System.Drawing.Point(349, 61)
+        Me.btnTariffaDepurazioneResidenti.Name = "btnTariffaDepurazioneResidenti"
+        Me.btnTariffaDepurazioneResidenti.Size = New System.Drawing.Size(75, 23)
+        Me.btnTariffaDepurazioneResidenti.TabIndex = 1
+        Me.btnTariffaDepurazioneResidenti.Text = "Configura"
+        Me.btnTariffaDepurazioneResidenti.UseSelectable = True
+        '
+        'btnTariffaFognaturaResidenti
+        '
+        Me.btnTariffaFognaturaResidenti.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnTariffaFognaturaResidenti.Location = New System.Drawing.Point(230, 61)
+        Me.btnTariffaFognaturaResidenti.Name = "btnTariffaFognaturaResidenti"
+        Me.btnTariffaFognaturaResidenti.Size = New System.Drawing.Size(75, 23)
+        Me.btnTariffaFognaturaResidenti.TabIndex = 1
+        Me.btnTariffaFognaturaResidenti.Text = "Configura"
+        Me.btnTariffaFognaturaResidenti.UseSelectable = True
+        '
+        'btnTariffaAcquedottoResidenti
+        '
+        Me.btnTariffaAcquedottoResidenti.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnTariffaAcquedottoResidenti.Location = New System.Drawing.Point(107, 61)
+        Me.btnTariffaAcquedottoResidenti.Name = "btnTariffaAcquedottoResidenti"
+        Me.btnTariffaAcquedottoResidenti.Size = New System.Drawing.Size(75, 23)
+        Me.btnTariffaAcquedottoResidenti.TabIndex = 1
+        Me.btnTariffaAcquedottoResidenti.Text = "Configura"
+        Me.btnTariffaAcquedottoResidenti.UseSelectable = True
+        '
+        'MetroLabel34
+        '
+        Me.MetroLabel34.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.MetroLabel34.AutoSize = True
+        Me.MetroLabel34.FontSize = MetroFramework.MetroLabelSize.Small
+        Me.MetroLabel34.Location = New System.Drawing.Point(349, 26)
+        Me.MetroLabel34.Name = "MetroLabel34"
+        Me.MetroLabel34.Size = New System.Drawing.Size(71, 15)
+        Me.MetroLabel34.TabIndex = 0
+        Me.MetroLabel34.Text = "Depurazione"
+        '
+        'MetroLabel33
+        '
+        Me.MetroLabel33.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.MetroLabel33.AutoSize = True
+        Me.MetroLabel33.FontSize = MetroFramework.MetroLabelSize.Small
+        Me.MetroLabel33.Location = New System.Drawing.Point(234, 26)
+        Me.MetroLabel33.Name = "MetroLabel33"
+        Me.MetroLabel33.Size = New System.Drawing.Size(59, 15)
+        Me.MetroLabel33.TabIndex = 0
+        Me.MetroLabel33.Text = "Fognatura"
+        '
+        'MetroLabel32
+        '
+        Me.MetroLabel32.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.MetroLabel32.AutoSize = True
+        Me.MetroLabel32.FontSize = MetroFramework.MetroLabelSize.Small
+        Me.MetroLabel32.Location = New System.Drawing.Point(111, 26)
+        Me.MetroLabel32.Name = "MetroLabel32"
+        Me.MetroLabel32.Size = New System.Drawing.Size(68, 15)
+        Me.MetroLabel32.TabIndex = 0
+        Me.MetroLabel32.Text = "Acquedotto"
+        '
+        'MetroTile6
+        '
+        Me.MetroTile6.ActiveControl = Nothing
+        Me.MetroTile6.Location = New System.Drawing.Point(6, 258)
+        Me.MetroTile6.Name = "MetroTile6"
+        Me.MetroTile6.Size = New System.Drawing.Size(112, 48)
+        Me.MetroTile6.Style = MetroFramework.MetroColorStyle.Pink
+        Me.MetroTile6.TabIndex = 2
+        Me.MetroTile6.Text = "Reimposta tutto"
+        Me.MetroTile6.UseSelectable = True
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.MetroLabel99)
+        Me.GroupBox2.Controls.Add(Me.nupPercentualeConsumo)
+        Me.GroupBox2.Controls.Add(Me.MetroLabel27)
+        Me.GroupBox2.Controls.Add(Me.nupPercentualeMillesimi)
+        Me.GroupBox2.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox2.Location = New System.Drawing.Point(3, 22)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(471, 50)
+        Me.GroupBox2.TabIndex = 5
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Riparto a millesimi"
+        '
+        'MetroLabel99
+        '
+        Me.MetroLabel99.AutoSize = True
+        Me.MetroLabel99.Location = New System.Drawing.Point(216, 18)
+        Me.MetroLabel99.Name = "MetroLabel99"
+        Me.MetroLabel99.Size = New System.Drawing.Size(105, 19)
+        Me.MetroLabel99.TabIndex = 4
+        Me.MetroLabel99.Text = "Perc. a consumo"
+        '
+        'nupPercentualeConsumo
+        '
+        Me.nupPercentualeConsumo.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.nupPercentualeConsumo.Location = New System.Drawing.Point(324, 18)
+        Me.nupPercentualeConsumo.Name = "nupPercentualeConsumo"
+        Me.nupPercentualeConsumo.Size = New System.Drawing.Size(56, 22)
+        Me.nupPercentualeConsumo.TabIndex = 3
+        Me.nupPercentualeConsumo.Value = New Decimal(New Integer() {70, 0, 0, 0})
+        '
+        'MetroLabel27
+        '
+        Me.MetroLabel27.AutoSize = True
+        Me.MetroLabel27.Location = New System.Drawing.Point(40, 18)
+        Me.MetroLabel27.Name = "MetroLabel27"
+        Me.MetroLabel27.Size = New System.Drawing.Size(103, 19)
+        Me.MetroLabel27.TabIndex = 4
+        Me.MetroLabel27.Text = "Perc. a millesimi"
+        '
+        'nupPercentualeMillesimi
+        '
+        Me.nupPercentualeMillesimi.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.nupPercentualeMillesimi.Location = New System.Drawing.Point(146, 18)
+        Me.nupPercentualeMillesimi.Name = "nupPercentualeMillesimi"
+        Me.nupPercentualeMillesimi.Size = New System.Drawing.Size(56, 22)
+        Me.nupPercentualeMillesimi.TabIndex = 3
+        Me.nupPercentualeMillesimi.Value = New Decimal(New Integer() {30, 0, 0, 0})
+        '
+        'MetroTile4
+        '
+        Me.MetroTile4.ActiveControl = Nothing
+        Me.MetroTile4.Location = New System.Drawing.Point(428, 449)
+        Me.MetroTile4.Name = "MetroTile4"
+        Me.MetroTile4.Size = New System.Drawing.Size(96, 48)
+        Me.MetroTile4.Style = MetroFramework.MetroColorStyle.Purple
+        Me.MetroTile4.TabIndex = 2
+        Me.MetroTile4.Text = "Apri"
+        Me.MetroTile4.UseSelectable = True
+        '
+        'MetroTile5
+        '
+        Me.MetroTile5.ActiveControl = Nothing
+        Me.MetroTile5.Location = New System.Drawing.Point(528, 449)
+        Me.MetroTile5.Name = "MetroTile5"
+        Me.MetroTile5.Size = New System.Drawing.Size(96, 48)
+        Me.MetroTile5.Style = MetroFramework.MetroColorStyle.Red
+        Me.MetroTile5.TabIndex = 2
+        Me.MetroTile5.Text = "Salva"
+        Me.MetroTile5.UseSelectable = True
+        '
+        'mlStatusBar
+        '
+        Me.mlStatusBar.AutoSize = True
+        Me.mlStatusBar.Location = New System.Drawing.Point(26, 490)
+        Me.mlStatusBar.Name = "mlStatusBar"
+        Me.mlStatusBar.Size = New System.Drawing.Size(0, 0)
+        Me.mlStatusBar.TabIndex = 9
+        '
+        'TimerStatusbar
+        '
+        Me.TimerStatusbar.Interval = 15000
+        '
         'ripartoACS
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(640, 450)
+        Me.ClientSize = New System.Drawing.Size(640, 520)
+        Me.Controls.Add(Me.mlStatusBar)
+        Me.Controls.Add(Me.MetroTile4)
+        Me.Controls.Add(Me.MetroTile5)
         Me.Controls.Add(Me.mpConfigurazioneRiparto)
         Me.Controls.Add(Me.mpPagina1)
         Me.Controls.Add(Me.btnCambiaPagina)
@@ -1532,25 +1597,25 @@ Partial Class ripartoACS
         CType(Me.nupConsumo2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.gbUnitaImmobiliare3.ResumeLayout(False)
         Me.gbUnitaImmobiliare3.PerformLayout()
-        CType(Me.NumericUpDown4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nupMillesimi3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.gbConsumo3.ResumeLayout(False)
         Me.gbConsumo3.PerformLayout()
         CType(Me.nupConsumo3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.gbUnitaImmobiliare4.ResumeLayout(False)
         Me.gbUnitaImmobiliare4.PerformLayout()
-        CType(Me.NumericUpDown6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nupMillesimi4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.gbConsumo4.ResumeLayout(False)
         Me.gbConsumo4.PerformLayout()
         CType(Me.nupConsumo4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.gbUnitaImmobiliare5.ResumeLayout(False)
         Me.gbUnitaImmobiliare5.PerformLayout()
-        CType(Me.NumericUpDown8, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nupMillesimi5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.gbConsumo5.ResumeLayout(False)
         Me.gbConsumo5.PerformLayout()
         CType(Me.nupConsumo5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.gbUnitaImmobiliare6.ResumeLayout(False)
         Me.gbUnitaImmobiliare6.PerformLayout()
-        CType(Me.NumericUpDown10, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nupMillesimi6, System.ComponentModel.ISupportInitialize).EndInit()
         Me.gbConsumo6.ResumeLayout(False)
         Me.gbConsumo6.PerformLayout()
         CType(Me.nupConsumo6, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1594,20 +1659,18 @@ Partial Class ripartoACS
         CType(Me.nupMillesimi7, System.ComponentModel.ISupportInitialize).EndInit()
         Me.mpConfigurazioneRiparto.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox4.ResumeLayout(False)
+        Me.GroupBox4.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.NumericUpDown7, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox4.ResumeLayout(False)
-        Me.GroupBox4.PerformLayout()
+        CType(Me.nupPercentualeConsumo, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nupPercentualeMillesimi, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents MetroStyleExtender1 As MetroFramework.Components.MetroStyleExtender
     Friend WithEvents nupQTAUnitaImmobiliari As NumericUpDown
     Friend WithEvents MetroPanel1 As MetroFramework.Controls.MetroPanel
     Friend WithEvents MetroLabel1 As MetroFramework.Controls.MetroLabel
@@ -1631,28 +1694,28 @@ Partial Class ripartoACS
     Friend WithEvents gbUnitaImmobiliare3 As GroupBox
     Friend WithEvents chkResidente3 As MetroFramework.Controls.MetroCheckBox
     Friend WithEvents MetroLabel5 As MetroFramework.Controls.MetroLabel
-    Friend WithEvents NumericUpDown4 As NumericUpDown
+    Friend WithEvents nupMillesimi3 As NumericUpDown
     Friend WithEvents gbConsumo3 As GroupBox
     Friend WithEvents MetroLabel6 As MetroFramework.Controls.MetroLabel
     Friend WithEvents nupConsumo3 As NumericUpDown
     Friend WithEvents gbUnitaImmobiliare4 As GroupBox
     Friend WithEvents chkResidente4 As MetroFramework.Controls.MetroCheckBox
     Friend WithEvents MetroLabel8 As MetroFramework.Controls.MetroLabel
-    Friend WithEvents NumericUpDown6 As NumericUpDown
+    Friend WithEvents nupMillesimi4 As NumericUpDown
     Friend WithEvents gbConsumo4 As GroupBox
     Friend WithEvents MetroLabel9 As MetroFramework.Controls.MetroLabel
     Friend WithEvents nupConsumo4 As NumericUpDown
     Friend WithEvents gbUnitaImmobiliare5 As GroupBox
     Friend WithEvents chkResidente5 As MetroFramework.Controls.MetroCheckBox
     Friend WithEvents MetroLabel10 As MetroFramework.Controls.MetroLabel
-    Friend WithEvents NumericUpDown8 As NumericUpDown
+    Friend WithEvents nupMillesimi5 As NumericUpDown
     Friend WithEvents gbConsumo5 As GroupBox
     Friend WithEvents MetroLabel11 As MetroFramework.Controls.MetroLabel
     Friend WithEvents nupConsumo5 As NumericUpDown
     Friend WithEvents gbUnitaImmobiliare6 As GroupBox
     Friend WithEvents chkResidente6 As MetroFramework.Controls.MetroCheckBox
     Friend WithEvents MetroLabel12 As MetroFramework.Controls.MetroLabel
-    Friend WithEvents NumericUpDown10 As NumericUpDown
+    Friend WithEvents nupMillesimi6 As NumericUpDown
     Friend WithEvents gbConsumo6 As GroupBox
     Friend WithEvents MetroLabel13 As MetroFramework.Controls.MetroLabel
     Friend WithEvents nupConsumo6 As NumericUpDown
@@ -1703,10 +1766,10 @@ Partial Class ripartoACS
     Friend WithEvents btnCambiaPagina As MetroFramework.Controls.MetroTile
     Friend WithEvents mpConfigurazioneRiparto As MetroFramework.Controls.MetroPanel
     Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents MetroLabel26 As MetroFramework.Controls.MetroLabel
-    Friend WithEvents NumericUpDown1 As NumericUpDown
+    Friend WithEvents MetroLabel99 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents nupPercentualeConsumo As NumericUpDown
     Friend WithEvents MetroLabel27 As MetroFramework.Controls.MetroLabel
-    Friend WithEvents NumericUpDown7 As NumericUpDown
+    Friend WithEvents nupPercentualeMillesimi As NumericUpDown
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents btnTariffaAcquedottoResidenti As MetroFramework.Controls.MetroButton
@@ -1722,4 +1785,9 @@ Partial Class ripartoACS
     Friend WithEvents MetroLabel28 As MetroFramework.Controls.MetroLabel
     Friend WithEvents MetroLabel29 As MetroFramework.Controls.MetroLabel
     Friend WithEvents MetroLabel30 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroTile4 As MetroFramework.Controls.MetroTile
+    Friend WithEvents MetroTile5 As MetroFramework.Controls.MetroTile
+    Friend WithEvents mlStatusBar As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroTile6 As MetroFramework.Controls.MetroTile
+    Friend WithEvents TimerStatusbar As Timer
 End Class
