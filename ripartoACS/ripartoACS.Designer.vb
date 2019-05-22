@@ -30,13 +30,17 @@ Partial Class ripartoACS
         Me.MetroTile1 = New MetroFramework.Controls.MetroTile()
         Me.MetroLabel1 = New MetroFramework.Controls.MetroLabel()
         Me.gbUnitaImmobiliare1 = New System.Windows.Forms.GroupBox()
+        Me.cbNumPersone1 = New System.Windows.Forms.ComboBox()
         Me.chkResidente1 = New MetroFramework.Controls.MetroCheckBox()
+        Me.MetroLabel26 = New MetroFramework.Controls.MetroLabel()
         Me.MetroLabel2 = New MetroFramework.Controls.MetroLabel()
         Me.nupMillesimi1 = New System.Windows.Forms.NumericUpDown()
         Me.gbConsumo1 = New System.Windows.Forms.GroupBox()
         Me.MetroLabel7 = New MetroFramework.Controls.MetroLabel()
         Me.nupConsumo1 = New System.Windows.Forms.NumericUpDown()
         Me.gbUnitaImmobiliare2 = New System.Windows.Forms.GroupBox()
+        Me.MetroLabel28 = New MetroFramework.Controls.MetroLabel()
+        Me.cbNumPersone2 = New System.Windows.Forms.ComboBox()
         Me.chkResidente2 = New MetroFramework.Controls.MetroCheckBox()
         Me.MetroLabel3 = New MetroFramework.Controls.MetroLabel()
         Me.nupMillesimi2 = New System.Windows.Forms.NumericUpDown()
@@ -44,6 +48,8 @@ Partial Class ripartoACS
         Me.MetroLabel4 = New MetroFramework.Controls.MetroLabel()
         Me.nupConsumo2 = New System.Windows.Forms.NumericUpDown()
         Me.gbUnitaImmobiliare3 = New System.Windows.Forms.GroupBox()
+        Me.MetroLabel29 = New MetroFramework.Controls.MetroLabel()
+        Me.cbNumPersone3 = New System.Windows.Forms.ComboBox()
         Me.chkResidente3 = New MetroFramework.Controls.MetroCheckBox()
         Me.MetroLabel5 = New MetroFramework.Controls.MetroLabel()
         Me.nupMillesimi3 = New System.Windows.Forms.NumericUpDown()
@@ -51,6 +57,8 @@ Partial Class ripartoACS
         Me.MetroLabel6 = New MetroFramework.Controls.MetroLabel()
         Me.nupConsumo3 = New System.Windows.Forms.NumericUpDown()
         Me.gbUnitaImmobiliare4 = New System.Windows.Forms.GroupBox()
+        Me.MetroLabel30 = New MetroFramework.Controls.MetroLabel()
+        Me.cbNumPersone4 = New System.Windows.Forms.ComboBox()
         Me.chkResidente4 = New MetroFramework.Controls.MetroCheckBox()
         Me.MetroLabel8 = New MetroFramework.Controls.MetroLabel()
         Me.nupMillesimi4 = New System.Windows.Forms.NumericUpDown()
@@ -58,6 +66,8 @@ Partial Class ripartoACS
         Me.MetroLabel9 = New MetroFramework.Controls.MetroLabel()
         Me.nupConsumo4 = New System.Windows.Forms.NumericUpDown()
         Me.gbUnitaImmobiliare5 = New System.Windows.Forms.GroupBox()
+        Me.MetroLabel31 = New MetroFramework.Controls.MetroLabel()
+        Me.cbNumPersone5 = New System.Windows.Forms.ComboBox()
         Me.chkResidente5 = New MetroFramework.Controls.MetroCheckBox()
         Me.MetroLabel10 = New MetroFramework.Controls.MetroLabel()
         Me.nupMillesimi5 = New System.Windows.Forms.NumericUpDown()
@@ -65,6 +75,8 @@ Partial Class ripartoACS
         Me.MetroLabel11 = New MetroFramework.Controls.MetroLabel()
         Me.nupConsumo5 = New System.Windows.Forms.NumericUpDown()
         Me.gbUnitaImmobiliare6 = New System.Windows.Forms.GroupBox()
+        Me.MetroLabel32 = New MetroFramework.Controls.MetroLabel()
+        Me.cbNumPersone6 = New System.Windows.Forms.ComboBox()
         Me.chkResidente6 = New MetroFramework.Controls.MetroCheckBox()
         Me.MetroLabel12 = New MetroFramework.Controls.MetroLabel()
         Me.nupMillesimi6 = New System.Windows.Forms.NumericUpDown()
@@ -92,26 +104,38 @@ Partial Class ripartoACS
         Me.MetroLabel19 = New MetroFramework.Controls.MetroLabel()
         Me.nupConsumo7 = New System.Windows.Forms.NumericUpDown()
         Me.gbUnitaImmobiliare12 = New System.Windows.Forms.GroupBox()
+        Me.cbNumPersone12 = New System.Windows.Forms.ComboBox()
+        Me.MetroLabel38 = New MetroFramework.Controls.MetroLabel()
         Me.chkResidente12 = New MetroFramework.Controls.MetroCheckBox()
         Me.MetroLabel20 = New MetroFramework.Controls.MetroLabel()
         Me.nupMillesimi12 = New System.Windows.Forms.NumericUpDown()
         Me.gbUnitaImmobiliare11 = New System.Windows.Forms.GroupBox()
+        Me.cbNumPersone11 = New System.Windows.Forms.ComboBox()
+        Me.MetroLabel37 = New MetroFramework.Controls.MetroLabel()
         Me.chkResidente11 = New MetroFramework.Controls.MetroCheckBox()
         Me.MetroLabel21 = New MetroFramework.Controls.MetroLabel()
         Me.nupMillesimi11 = New System.Windows.Forms.NumericUpDown()
         Me.gbUnitaImmobiliare10 = New System.Windows.Forms.GroupBox()
+        Me.cbNumPersone10 = New System.Windows.Forms.ComboBox()
+        Me.MetroLabel36 = New MetroFramework.Controls.MetroLabel()
         Me.chkResidente10 = New MetroFramework.Controls.MetroCheckBox()
         Me.MetroLabel22 = New MetroFramework.Controls.MetroLabel()
         Me.nupMillesimi10 = New System.Windows.Forms.NumericUpDown()
         Me.gbUnitaImmobiliare9 = New System.Windows.Forms.GroupBox()
+        Me.cbNumPersone9 = New System.Windows.Forms.ComboBox()
+        Me.MetroLabel35 = New MetroFramework.Controls.MetroLabel()
         Me.chkResidente9 = New MetroFramework.Controls.MetroCheckBox()
         Me.MetroLabel23 = New MetroFramework.Controls.MetroLabel()
         Me.nupMillesimi9 = New System.Windows.Forms.NumericUpDown()
         Me.gbUnitaImmobiliare8 = New System.Windows.Forms.GroupBox()
+        Me.cbNumPersone8 = New System.Windows.Forms.ComboBox()
+        Me.MetroLabel34 = New MetroFramework.Controls.MetroLabel()
         Me.chkResidente8 = New MetroFramework.Controls.MetroCheckBox()
         Me.MetroLabel24 = New MetroFramework.Controls.MetroLabel()
         Me.nupMillesimi8 = New System.Windows.Forms.NumericUpDown()
         Me.gbUnitaImmobiliare7 = New System.Windows.Forms.GroupBox()
+        Me.cbNumPersone7 = New System.Windows.Forms.ComboBox()
+        Me.MetroLabel33 = New MetroFramework.Controls.MetroLabel()
         Me.chkResidente7 = New MetroFramework.Controls.MetroCheckBox()
         Me.MetroLabel25 = New MetroFramework.Controls.MetroLabel()
         Me.nupMillesimi7 = New System.Windows.Forms.NumericUpDown()
@@ -119,7 +143,13 @@ Partial Class ripartoACS
         Me.mpConfigurazioneRiparto = New MetroFramework.Controls.MetroPanel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.btnTariffaDepurazioneNonResidenti = New MetroFramework.Controls.MetroTile()
+        Me.btnTariffaFognaturaNonResidenti = New MetroFramework.Controls.MetroTile()
+        Me.btnTariffaAcquedottoNonResidenti = New MetroFramework.Controls.MetroTile()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.btnTariffaDepurazioneResidenti = New MetroFramework.Controls.MetroTile()
+        Me.btnTariffaFognaturaResidenti = New MetroFramework.Controls.MetroTile()
+        Me.btnTariffaAcquedottoResidenti = New MetroFramework.Controls.MetroTile()
         Me.MetroTile6 = New MetroFramework.Controls.MetroTile()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.MetroLabel99 = New MetroFramework.Controls.MetroLabel()
@@ -130,12 +160,8 @@ Partial Class ripartoACS
         Me.MetroTile5 = New MetroFramework.Controls.MetroTile()
         Me.mlStatusBar = New MetroFramework.Controls.MetroLabel()
         Me.TimerStatusbar = New System.Windows.Forms.Timer(Me.components)
-        Me.btnTariffaAcquedottoResidenti = New MetroFramework.Controls.MetroTile()
-        Me.btnTariffaFognaturaResidenti = New MetroFramework.Controls.MetroTile()
-        Me.btnTariffaDepurazioneResidenti = New MetroFramework.Controls.MetroTile()
-        Me.btnTariffaAcquedottoNonResidenti = New MetroFramework.Controls.MetroTile()
-        Me.btnTariffaFognaturaNonResidenti = New MetroFramework.Controls.MetroTile()
-        Me.btnTariffaDepurazioneNonResidenti = New MetroFramework.Controls.MetroTile()
+        Me.nupImportoDaRipartire = New System.Windows.Forms.NumericUpDown()
+        Me.MetroLabel39 = New MetroFramework.Controls.MetroLabel()
         CType(Me.nupQTAUnitaImmobiliari, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MetroPanel1.SuspendLayout()
         Me.gbUnitaImmobiliare1.SuspendLayout()
@@ -195,12 +221,13 @@ Partial Class ripartoACS
         Me.GroupBox2.SuspendLayout()
         CType(Me.nupPercentualeConsumo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nupPercentualeMillesimi, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nupImportoDaRipartire, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'nupQTAUnitaImmobiliari
         '
         Me.nupQTAUnitaImmobiliari.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.nupQTAUnitaImmobiliari.Location = New System.Drawing.Point(272, 64)
+        Me.nupQTAUnitaImmobiliari.Location = New System.Drawing.Point(255, 64)
         Me.nupQTAUnitaImmobiliari.Maximum = New Decimal(New Integer() {12, 0, 0, 0})
         Me.nupQTAUnitaImmobiliari.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.nupQTAUnitaImmobiliari.Name = "nupQTAUnitaImmobiliari"
@@ -261,35 +288,59 @@ Partial Class ripartoACS
         Me.MetroLabel1.AutoSize = True
         Me.MetroLabel1.Location = New System.Drawing.Point(156, 64)
         Me.MetroLabel1.Name = "MetroLabel1"
-        Me.MetroLabel1.Size = New System.Drawing.Size(110, 19)
+        Me.MetroLabel1.Size = New System.Drawing.Size(95, 19)
         Me.MetroLabel1.TabIndex = 2
-        Me.MetroLabel1.Text = "Unità immobiliari"
+        Me.MetroLabel1.Text = "Unità immobil."
         '
         'gbUnitaImmobiliare1
         '
+        Me.gbUnitaImmobiliare1.Controls.Add(Me.cbNumPersone1)
         Me.gbUnitaImmobiliare1.Controls.Add(Me.chkResidente1)
+        Me.gbUnitaImmobiliare1.Controls.Add(Me.MetroLabel26)
         Me.gbUnitaImmobiliare1.Controls.Add(Me.MetroLabel2)
         Me.gbUnitaImmobiliare1.Controls.Add(Me.nupMillesimi1)
         Me.gbUnitaImmobiliare1.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gbUnitaImmobiliare1.Location = New System.Drawing.Point(15, 7)
         Me.gbUnitaImmobiliare1.Name = "gbUnitaImmobiliare1"
-        Me.gbUnitaImmobiliare1.Size = New System.Drawing.Size(268, 50)
+        Me.gbUnitaImmobiliare1.Size = New System.Drawing.Size(268, 55)
         Me.gbUnitaImmobiliare1.TabIndex = 3
         Me.gbUnitaImmobiliare1.TabStop = False
         Me.gbUnitaImmobiliare1.Text = "Unità immobiliare 1"
         '
+        'cbNumPersone1
+        '
+        Me.cbNumPersone1.DropDownHeight = 50
+        Me.cbNumPersone1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbNumPersone1.IntegralHeight = False
+        Me.cbNumPersone1.ItemHeight = 13
+        Me.cbNumPersone1.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9"})
+        Me.cbNumPersone1.Location = New System.Drawing.Point(163, 29)
+        Me.cbNumPersone1.Name = "cbNumPersone1"
+        Me.cbNumPersone1.Size = New System.Drawing.Size(37, 21)
+        Me.cbNumPersone1.TabIndex = 6
+        '
         'chkResidente1
         '
         Me.chkResidente1.AutoSize = True
+        Me.chkResidente1.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.chkResidente1.FontSize = MetroFramework.MetroCheckBoxSize.Medium
         Me.chkResidente1.FontWeight = MetroFramework.MetroCheckBoxWeight.Light
         Me.chkResidente1.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.chkResidente1.Location = New System.Drawing.Point(153, 18)
+        Me.chkResidente1.Location = New System.Drawing.Point(180, 9)
         Me.chkResidente1.Name = "chkResidente1"
         Me.chkResidente1.Size = New System.Drawing.Size(81, 19)
         Me.chkResidente1.TabIndex = 5
         Me.chkResidente1.Text = "Residente"
         Me.chkResidente1.UseSelectable = True
+        '
+        'MetroLabel26
+        '
+        Me.MetroLabel26.AutoSize = True
+        Me.MetroLabel26.Location = New System.Drawing.Point(205, 30)
+        Me.MetroLabel26.Name = "MetroLabel26"
+        Me.MetroLabel26.Size = New System.Drawing.Size(56, 19)
+        Me.MetroLabel26.TabIndex = 4
+        Me.MetroLabel26.Text = "persone"
         '
         'MetroLabel2
         '
@@ -302,7 +353,7 @@ Partial Class ripartoACS
         '
         'nupMillesimi1
         '
-        Me.nupMillesimi1.DecimalPlaces = 1
+        Me.nupMillesimi1.DecimalPlaces = 2
         Me.nupMillesimi1.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.nupMillesimi1.Location = New System.Drawing.Point(72, 18)
         Me.nupMillesimi1.Maximum = New Decimal(New Integer() {1000, 0, 0, 0})
@@ -319,7 +370,7 @@ Partial Class ripartoACS
         Me.gbConsumo1.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gbConsumo1.Location = New System.Drawing.Point(299, 7)
         Me.gbConsumo1.Name = "gbConsumo1"
-        Me.gbConsumo1.Size = New System.Drawing.Size(168, 50)
+        Me.gbConsumo1.Size = New System.Drawing.Size(168, 55)
         Me.gbConsumo1.TabIndex = 3
         Me.gbConsumo1.TabStop = False
         Me.gbConsumo1.Text = "Consumo unità immobiliare 1"
@@ -344,25 +395,49 @@ Partial Class ripartoACS
         '
         'gbUnitaImmobiliare2
         '
+        Me.gbUnitaImmobiliare2.Controls.Add(Me.MetroLabel28)
+        Me.gbUnitaImmobiliare2.Controls.Add(Me.cbNumPersone2)
         Me.gbUnitaImmobiliare2.Controls.Add(Me.chkResidente2)
         Me.gbUnitaImmobiliare2.Controls.Add(Me.MetroLabel3)
         Me.gbUnitaImmobiliare2.Controls.Add(Me.nupMillesimi2)
         Me.gbUnitaImmobiliare2.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gbUnitaImmobiliare2.Location = New System.Drawing.Point(16, 63)
         Me.gbUnitaImmobiliare2.Name = "gbUnitaImmobiliare2"
-        Me.gbUnitaImmobiliare2.Size = New System.Drawing.Size(268, 50)
+        Me.gbUnitaImmobiliare2.Size = New System.Drawing.Size(268, 55)
         Me.gbUnitaImmobiliare2.TabIndex = 3
         Me.gbUnitaImmobiliare2.TabStop = False
         Me.gbUnitaImmobiliare2.Text = "Unità immobiliare 2"
         Me.gbUnitaImmobiliare2.Visible = False
         '
+        'MetroLabel28
+        '
+        Me.MetroLabel28.AutoSize = True
+        Me.MetroLabel28.Location = New System.Drawing.Point(204, 30)
+        Me.MetroLabel28.Name = "MetroLabel28"
+        Me.MetroLabel28.Size = New System.Drawing.Size(56, 19)
+        Me.MetroLabel28.TabIndex = 8
+        Me.MetroLabel28.Text = "persone"
+        '
+        'cbNumPersone2
+        '
+        Me.cbNumPersone2.DropDownHeight = 50
+        Me.cbNumPersone2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbNumPersone2.IntegralHeight = False
+        Me.cbNumPersone2.ItemHeight = 13
+        Me.cbNumPersone2.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9"})
+        Me.cbNumPersone2.Location = New System.Drawing.Point(162, 29)
+        Me.cbNumPersone2.Name = "cbNumPersone2"
+        Me.cbNumPersone2.Size = New System.Drawing.Size(37, 21)
+        Me.cbNumPersone2.TabIndex = 7
+        '
         'chkResidente2
         '
         Me.chkResidente2.AutoSize = True
+        Me.chkResidente2.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.chkResidente2.FontSize = MetroFramework.MetroCheckBoxSize.Medium
         Me.chkResidente2.FontWeight = MetroFramework.MetroCheckBoxWeight.Light
         Me.chkResidente2.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.chkResidente2.Location = New System.Drawing.Point(153, 18)
+        Me.chkResidente2.Location = New System.Drawing.Point(180, 9)
         Me.chkResidente2.Name = "chkResidente2"
         Me.chkResidente2.Size = New System.Drawing.Size(81, 19)
         Me.chkResidente2.TabIndex = 5
@@ -380,7 +455,7 @@ Partial Class ripartoACS
         '
         'nupMillesimi2
         '
-        Me.nupMillesimi2.DecimalPlaces = 1
+        Me.nupMillesimi2.DecimalPlaces = 2
         Me.nupMillesimi2.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.nupMillesimi2.Location = New System.Drawing.Point(72, 18)
         Me.nupMillesimi2.Maximum = New Decimal(New Integer() {1000, 0, 0, 0})
@@ -397,7 +472,7 @@ Partial Class ripartoACS
         Me.gbConsumo2.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gbConsumo2.Location = New System.Drawing.Point(300, 63)
         Me.gbConsumo2.Name = "gbConsumo2"
-        Me.gbConsumo2.Size = New System.Drawing.Size(168, 50)
+        Me.gbConsumo2.Size = New System.Drawing.Size(168, 55)
         Me.gbConsumo2.TabIndex = 3
         Me.gbConsumo2.TabStop = False
         Me.gbConsumo2.Text = "Consumo unità immobiliare 2"
@@ -423,25 +498,49 @@ Partial Class ripartoACS
         '
         'gbUnitaImmobiliare3
         '
+        Me.gbUnitaImmobiliare3.Controls.Add(Me.MetroLabel29)
+        Me.gbUnitaImmobiliare3.Controls.Add(Me.cbNumPersone3)
         Me.gbUnitaImmobiliare3.Controls.Add(Me.chkResidente3)
         Me.gbUnitaImmobiliare3.Controls.Add(Me.MetroLabel5)
         Me.gbUnitaImmobiliare3.Controls.Add(Me.nupMillesimi3)
         Me.gbUnitaImmobiliare3.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gbUnitaImmobiliare3.Location = New System.Drawing.Point(15, 119)
         Me.gbUnitaImmobiliare3.Name = "gbUnitaImmobiliare3"
-        Me.gbUnitaImmobiliare3.Size = New System.Drawing.Size(268, 50)
+        Me.gbUnitaImmobiliare3.Size = New System.Drawing.Size(268, 55)
         Me.gbUnitaImmobiliare3.TabIndex = 3
         Me.gbUnitaImmobiliare3.TabStop = False
         Me.gbUnitaImmobiliare3.Text = "Unità immobiliare 3"
         Me.gbUnitaImmobiliare3.Visible = False
         '
+        'MetroLabel29
+        '
+        Me.MetroLabel29.AutoSize = True
+        Me.MetroLabel29.Location = New System.Drawing.Point(205, 30)
+        Me.MetroLabel29.Name = "MetroLabel29"
+        Me.MetroLabel29.Size = New System.Drawing.Size(56, 19)
+        Me.MetroLabel29.TabIndex = 8
+        Me.MetroLabel29.Text = "persone"
+        '
+        'cbNumPersone3
+        '
+        Me.cbNumPersone3.DropDownHeight = 50
+        Me.cbNumPersone3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbNumPersone3.IntegralHeight = False
+        Me.cbNumPersone3.ItemHeight = 13
+        Me.cbNumPersone3.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9"})
+        Me.cbNumPersone3.Location = New System.Drawing.Point(163, 29)
+        Me.cbNumPersone3.Name = "cbNumPersone3"
+        Me.cbNumPersone3.Size = New System.Drawing.Size(37, 21)
+        Me.cbNumPersone3.TabIndex = 7
+        '
         'chkResidente3
         '
         Me.chkResidente3.AutoSize = True
+        Me.chkResidente3.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.chkResidente3.FontSize = MetroFramework.MetroCheckBoxSize.Medium
         Me.chkResidente3.FontWeight = MetroFramework.MetroCheckBoxWeight.Light
         Me.chkResidente3.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.chkResidente3.Location = New System.Drawing.Point(153, 18)
+        Me.chkResidente3.Location = New System.Drawing.Point(180, 9)
         Me.chkResidente3.Name = "chkResidente3"
         Me.chkResidente3.Size = New System.Drawing.Size(81, 19)
         Me.chkResidente3.TabIndex = 5
@@ -459,7 +558,7 @@ Partial Class ripartoACS
         '
         'nupMillesimi3
         '
-        Me.nupMillesimi3.DecimalPlaces = 1
+        Me.nupMillesimi3.DecimalPlaces = 2
         Me.nupMillesimi3.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.nupMillesimi3.Location = New System.Drawing.Point(72, 18)
         Me.nupMillesimi3.Maximum = New Decimal(New Integer() {1000, 0, 0, 0})
@@ -476,7 +575,7 @@ Partial Class ripartoACS
         Me.gbConsumo3.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gbConsumo3.Location = New System.Drawing.Point(299, 119)
         Me.gbConsumo3.Name = "gbConsumo3"
-        Me.gbConsumo3.Size = New System.Drawing.Size(168, 50)
+        Me.gbConsumo3.Size = New System.Drawing.Size(168, 55)
         Me.gbConsumo3.TabIndex = 3
         Me.gbConsumo3.TabStop = False
         Me.gbConsumo3.Text = "Consumo unità immobiliare 3"
@@ -502,25 +601,49 @@ Partial Class ripartoACS
         '
         'gbUnitaImmobiliare4
         '
+        Me.gbUnitaImmobiliare4.Controls.Add(Me.MetroLabel30)
+        Me.gbUnitaImmobiliare4.Controls.Add(Me.cbNumPersone4)
         Me.gbUnitaImmobiliare4.Controls.Add(Me.chkResidente4)
         Me.gbUnitaImmobiliare4.Controls.Add(Me.MetroLabel8)
         Me.gbUnitaImmobiliare4.Controls.Add(Me.nupMillesimi4)
         Me.gbUnitaImmobiliare4.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gbUnitaImmobiliare4.Location = New System.Drawing.Point(15, 175)
         Me.gbUnitaImmobiliare4.Name = "gbUnitaImmobiliare4"
-        Me.gbUnitaImmobiliare4.Size = New System.Drawing.Size(268, 50)
+        Me.gbUnitaImmobiliare4.Size = New System.Drawing.Size(268, 55)
         Me.gbUnitaImmobiliare4.TabIndex = 3
         Me.gbUnitaImmobiliare4.TabStop = False
         Me.gbUnitaImmobiliare4.Text = "Unità immobiliare 4"
         Me.gbUnitaImmobiliare4.Visible = False
         '
+        'MetroLabel30
+        '
+        Me.MetroLabel30.AutoSize = True
+        Me.MetroLabel30.Location = New System.Drawing.Point(205, 30)
+        Me.MetroLabel30.Name = "MetroLabel30"
+        Me.MetroLabel30.Size = New System.Drawing.Size(56, 19)
+        Me.MetroLabel30.TabIndex = 8
+        Me.MetroLabel30.Text = "persone"
+        '
+        'cbNumPersone4
+        '
+        Me.cbNumPersone4.DropDownHeight = 50
+        Me.cbNumPersone4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbNumPersone4.IntegralHeight = False
+        Me.cbNumPersone4.ItemHeight = 13
+        Me.cbNumPersone4.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9"})
+        Me.cbNumPersone4.Location = New System.Drawing.Point(163, 29)
+        Me.cbNumPersone4.Name = "cbNumPersone4"
+        Me.cbNumPersone4.Size = New System.Drawing.Size(37, 21)
+        Me.cbNumPersone4.TabIndex = 7
+        '
         'chkResidente4
         '
         Me.chkResidente4.AutoSize = True
+        Me.chkResidente4.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.chkResidente4.FontSize = MetroFramework.MetroCheckBoxSize.Medium
         Me.chkResidente4.FontWeight = MetroFramework.MetroCheckBoxWeight.Light
         Me.chkResidente4.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.chkResidente4.Location = New System.Drawing.Point(153, 18)
+        Me.chkResidente4.Location = New System.Drawing.Point(180, 9)
         Me.chkResidente4.Name = "chkResidente4"
         Me.chkResidente4.Size = New System.Drawing.Size(81, 19)
         Me.chkResidente4.TabIndex = 5
@@ -538,7 +661,7 @@ Partial Class ripartoACS
         '
         'nupMillesimi4
         '
-        Me.nupMillesimi4.DecimalPlaces = 1
+        Me.nupMillesimi4.DecimalPlaces = 2
         Me.nupMillesimi4.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.nupMillesimi4.Location = New System.Drawing.Point(72, 18)
         Me.nupMillesimi4.Maximum = New Decimal(New Integer() {1000, 0, 0, 0})
@@ -555,7 +678,7 @@ Partial Class ripartoACS
         Me.gbConsumo4.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gbConsumo4.Location = New System.Drawing.Point(299, 175)
         Me.gbConsumo4.Name = "gbConsumo4"
-        Me.gbConsumo4.Size = New System.Drawing.Size(168, 50)
+        Me.gbConsumo4.Size = New System.Drawing.Size(168, 55)
         Me.gbConsumo4.TabIndex = 3
         Me.gbConsumo4.TabStop = False
         Me.gbConsumo4.Text = "Consumo unità immobiliare 4"
@@ -581,25 +704,49 @@ Partial Class ripartoACS
         '
         'gbUnitaImmobiliare5
         '
+        Me.gbUnitaImmobiliare5.Controls.Add(Me.MetroLabel31)
+        Me.gbUnitaImmobiliare5.Controls.Add(Me.cbNumPersone5)
         Me.gbUnitaImmobiliare5.Controls.Add(Me.chkResidente5)
         Me.gbUnitaImmobiliare5.Controls.Add(Me.MetroLabel10)
         Me.gbUnitaImmobiliare5.Controls.Add(Me.nupMillesimi5)
         Me.gbUnitaImmobiliare5.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gbUnitaImmobiliare5.Location = New System.Drawing.Point(15, 231)
         Me.gbUnitaImmobiliare5.Name = "gbUnitaImmobiliare5"
-        Me.gbUnitaImmobiliare5.Size = New System.Drawing.Size(268, 50)
+        Me.gbUnitaImmobiliare5.Size = New System.Drawing.Size(268, 55)
         Me.gbUnitaImmobiliare5.TabIndex = 3
         Me.gbUnitaImmobiliare5.TabStop = False
         Me.gbUnitaImmobiliare5.Text = "Unità immobiliare 5"
         Me.gbUnitaImmobiliare5.Visible = False
         '
+        'MetroLabel31
+        '
+        Me.MetroLabel31.AutoSize = True
+        Me.MetroLabel31.Location = New System.Drawing.Point(205, 30)
+        Me.MetroLabel31.Name = "MetroLabel31"
+        Me.MetroLabel31.Size = New System.Drawing.Size(56, 19)
+        Me.MetroLabel31.TabIndex = 8
+        Me.MetroLabel31.Text = "persone"
+        '
+        'cbNumPersone5
+        '
+        Me.cbNumPersone5.DropDownHeight = 50
+        Me.cbNumPersone5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbNumPersone5.IntegralHeight = False
+        Me.cbNumPersone5.ItemHeight = 13
+        Me.cbNumPersone5.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9"})
+        Me.cbNumPersone5.Location = New System.Drawing.Point(163, 29)
+        Me.cbNumPersone5.Name = "cbNumPersone5"
+        Me.cbNumPersone5.Size = New System.Drawing.Size(37, 21)
+        Me.cbNumPersone5.TabIndex = 7
+        '
         'chkResidente5
         '
         Me.chkResidente5.AutoSize = True
+        Me.chkResidente5.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.chkResidente5.FontSize = MetroFramework.MetroCheckBoxSize.Medium
         Me.chkResidente5.FontWeight = MetroFramework.MetroCheckBoxWeight.Light
         Me.chkResidente5.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.chkResidente5.Location = New System.Drawing.Point(153, 18)
+        Me.chkResidente5.Location = New System.Drawing.Point(180, 9)
         Me.chkResidente5.Name = "chkResidente5"
         Me.chkResidente5.Size = New System.Drawing.Size(81, 19)
         Me.chkResidente5.TabIndex = 5
@@ -617,7 +764,7 @@ Partial Class ripartoACS
         '
         'nupMillesimi5
         '
-        Me.nupMillesimi5.DecimalPlaces = 1
+        Me.nupMillesimi5.DecimalPlaces = 2
         Me.nupMillesimi5.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.nupMillesimi5.Location = New System.Drawing.Point(72, 18)
         Me.nupMillesimi5.Maximum = New Decimal(New Integer() {1000, 0, 0, 0})
@@ -634,7 +781,7 @@ Partial Class ripartoACS
         Me.gbConsumo5.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gbConsumo5.Location = New System.Drawing.Point(299, 231)
         Me.gbConsumo5.Name = "gbConsumo5"
-        Me.gbConsumo5.Size = New System.Drawing.Size(168, 50)
+        Me.gbConsumo5.Size = New System.Drawing.Size(168, 55)
         Me.gbConsumo5.TabIndex = 3
         Me.gbConsumo5.TabStop = False
         Me.gbConsumo5.Text = "Consumo unità immobiliare 5"
@@ -660,25 +807,49 @@ Partial Class ripartoACS
         '
         'gbUnitaImmobiliare6
         '
+        Me.gbUnitaImmobiliare6.Controls.Add(Me.MetroLabel32)
+        Me.gbUnitaImmobiliare6.Controls.Add(Me.cbNumPersone6)
         Me.gbUnitaImmobiliare6.Controls.Add(Me.chkResidente6)
         Me.gbUnitaImmobiliare6.Controls.Add(Me.MetroLabel12)
         Me.gbUnitaImmobiliare6.Controls.Add(Me.nupMillesimi6)
         Me.gbUnitaImmobiliare6.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gbUnitaImmobiliare6.Location = New System.Drawing.Point(15, 287)
         Me.gbUnitaImmobiliare6.Name = "gbUnitaImmobiliare6"
-        Me.gbUnitaImmobiliare6.Size = New System.Drawing.Size(268, 50)
+        Me.gbUnitaImmobiliare6.Size = New System.Drawing.Size(268, 55)
         Me.gbUnitaImmobiliare6.TabIndex = 3
         Me.gbUnitaImmobiliare6.TabStop = False
         Me.gbUnitaImmobiliare6.Text = "Unità immobiliare 6"
         Me.gbUnitaImmobiliare6.Visible = False
         '
+        'MetroLabel32
+        '
+        Me.MetroLabel32.AutoSize = True
+        Me.MetroLabel32.Location = New System.Drawing.Point(205, 30)
+        Me.MetroLabel32.Name = "MetroLabel32"
+        Me.MetroLabel32.Size = New System.Drawing.Size(56, 19)
+        Me.MetroLabel32.TabIndex = 8
+        Me.MetroLabel32.Text = "persone"
+        '
+        'cbNumPersone6
+        '
+        Me.cbNumPersone6.DropDownHeight = 50
+        Me.cbNumPersone6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbNumPersone6.IntegralHeight = False
+        Me.cbNumPersone6.ItemHeight = 13
+        Me.cbNumPersone6.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9"})
+        Me.cbNumPersone6.Location = New System.Drawing.Point(163, 29)
+        Me.cbNumPersone6.Name = "cbNumPersone6"
+        Me.cbNumPersone6.Size = New System.Drawing.Size(37, 21)
+        Me.cbNumPersone6.TabIndex = 7
+        '
         'chkResidente6
         '
         Me.chkResidente6.AutoSize = True
+        Me.chkResidente6.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.chkResidente6.FontSize = MetroFramework.MetroCheckBoxSize.Medium
         Me.chkResidente6.FontWeight = MetroFramework.MetroCheckBoxWeight.Light
         Me.chkResidente6.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.chkResidente6.Location = New System.Drawing.Point(153, 18)
+        Me.chkResidente6.Location = New System.Drawing.Point(180, 9)
         Me.chkResidente6.Name = "chkResidente6"
         Me.chkResidente6.Size = New System.Drawing.Size(81, 19)
         Me.chkResidente6.TabIndex = 5
@@ -696,7 +867,7 @@ Partial Class ripartoACS
         '
         'nupMillesimi6
         '
-        Me.nupMillesimi6.DecimalPlaces = 1
+        Me.nupMillesimi6.DecimalPlaces = 2
         Me.nupMillesimi6.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.nupMillesimi6.Location = New System.Drawing.Point(72, 18)
         Me.nupMillesimi6.Maximum = New Decimal(New Integer() {1000, 0, 0, 0})
@@ -713,7 +884,7 @@ Partial Class ripartoACS
         Me.gbConsumo6.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gbConsumo6.Location = New System.Drawing.Point(299, 287)
         Me.gbConsumo6.Name = "gbConsumo6"
-        Me.gbConsumo6.Size = New System.Drawing.Size(168, 50)
+        Me.gbConsumo6.Size = New System.Drawing.Size(168, 55)
         Me.gbConsumo6.TabIndex = 3
         Me.gbConsumo6.TabStop = False
         Me.gbConsumo6.Text = "Consumo unità immobiliare 6"
@@ -795,7 +966,7 @@ Partial Class ripartoACS
         Me.gbConsumo12.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gbConsumo12.Location = New System.Drawing.Point(299, 287)
         Me.gbConsumo12.Name = "gbConsumo12"
-        Me.gbConsumo12.Size = New System.Drawing.Size(168, 50)
+        Me.gbConsumo12.Size = New System.Drawing.Size(168, 55)
         Me.gbConsumo12.TabIndex = 3
         Me.gbConsumo12.TabStop = False
         Me.gbConsumo12.Text = "Consumo unità immobiliare 12"
@@ -826,7 +997,7 @@ Partial Class ripartoACS
         Me.gbConsumo11.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gbConsumo11.Location = New System.Drawing.Point(299, 231)
         Me.gbConsumo11.Name = "gbConsumo11"
-        Me.gbConsumo11.Size = New System.Drawing.Size(168, 50)
+        Me.gbConsumo11.Size = New System.Drawing.Size(168, 55)
         Me.gbConsumo11.TabIndex = 3
         Me.gbConsumo11.TabStop = False
         Me.gbConsumo11.Text = "Consumo unità immobiliare 11"
@@ -857,7 +1028,7 @@ Partial Class ripartoACS
         Me.gbConsumo10.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gbConsumo10.Location = New System.Drawing.Point(299, 175)
         Me.gbConsumo10.Name = "gbConsumo10"
-        Me.gbConsumo10.Size = New System.Drawing.Size(168, 50)
+        Me.gbConsumo10.Size = New System.Drawing.Size(168, 55)
         Me.gbConsumo10.TabIndex = 3
         Me.gbConsumo10.TabStop = False
         Me.gbConsumo10.Text = "Consumo unità immobiliare 10"
@@ -888,7 +1059,7 @@ Partial Class ripartoACS
         Me.gbConsumo9.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gbConsumo9.Location = New System.Drawing.Point(299, 119)
         Me.gbConsumo9.Name = "gbConsumo9"
-        Me.gbConsumo9.Size = New System.Drawing.Size(168, 50)
+        Me.gbConsumo9.Size = New System.Drawing.Size(168, 55)
         Me.gbConsumo9.TabIndex = 3
         Me.gbConsumo9.TabStop = False
         Me.gbConsumo9.Text = "Consumo unità immobiliare 9"
@@ -919,7 +1090,7 @@ Partial Class ripartoACS
         Me.gbConsumo8.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gbConsumo8.Location = New System.Drawing.Point(300, 63)
         Me.gbConsumo8.Name = "gbConsumo8"
-        Me.gbConsumo8.Size = New System.Drawing.Size(168, 50)
+        Me.gbConsumo8.Size = New System.Drawing.Size(168, 55)
         Me.gbConsumo8.TabIndex = 3
         Me.gbConsumo8.TabStop = False
         Me.gbConsumo8.Text = "Consumo unità immobiliare 8"
@@ -950,7 +1121,7 @@ Partial Class ripartoACS
         Me.gbConsumo7.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gbConsumo7.Location = New System.Drawing.Point(299, 7)
         Me.gbConsumo7.Name = "gbConsumo7"
-        Me.gbConsumo7.Size = New System.Drawing.Size(168, 50)
+        Me.gbConsumo7.Size = New System.Drawing.Size(168, 55)
         Me.gbConsumo7.TabIndex = 3
         Me.gbConsumo7.TabStop = False
         Me.gbConsumo7.Text = "Consumo unità immobiliare 7"
@@ -975,25 +1146,49 @@ Partial Class ripartoACS
         '
         'gbUnitaImmobiliare12
         '
+        Me.gbUnitaImmobiliare12.Controls.Add(Me.cbNumPersone12)
+        Me.gbUnitaImmobiliare12.Controls.Add(Me.MetroLabel38)
         Me.gbUnitaImmobiliare12.Controls.Add(Me.chkResidente12)
         Me.gbUnitaImmobiliare12.Controls.Add(Me.MetroLabel20)
         Me.gbUnitaImmobiliare12.Controls.Add(Me.nupMillesimi12)
         Me.gbUnitaImmobiliare12.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gbUnitaImmobiliare12.Location = New System.Drawing.Point(15, 287)
         Me.gbUnitaImmobiliare12.Name = "gbUnitaImmobiliare12"
-        Me.gbUnitaImmobiliare12.Size = New System.Drawing.Size(268, 50)
+        Me.gbUnitaImmobiliare12.Size = New System.Drawing.Size(268, 55)
         Me.gbUnitaImmobiliare12.TabIndex = 3
         Me.gbUnitaImmobiliare12.TabStop = False
         Me.gbUnitaImmobiliare12.Text = "Unità immobiliare 12"
         Me.gbUnitaImmobiliare12.Visible = False
         '
+        'cbNumPersone12
+        '
+        Me.cbNumPersone12.DropDownHeight = 50
+        Me.cbNumPersone12.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbNumPersone12.IntegralHeight = False
+        Me.cbNumPersone12.ItemHeight = 13
+        Me.cbNumPersone12.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9"})
+        Me.cbNumPersone12.Location = New System.Drawing.Point(163, 29)
+        Me.cbNumPersone12.Name = "cbNumPersone12"
+        Me.cbNumPersone12.Size = New System.Drawing.Size(37, 21)
+        Me.cbNumPersone12.TabIndex = 10
+        '
+        'MetroLabel38
+        '
+        Me.MetroLabel38.AutoSize = True
+        Me.MetroLabel38.Location = New System.Drawing.Point(205, 30)
+        Me.MetroLabel38.Name = "MetroLabel38"
+        Me.MetroLabel38.Size = New System.Drawing.Size(56, 19)
+        Me.MetroLabel38.TabIndex = 9
+        Me.MetroLabel38.Text = "persone"
+        '
         'chkResidente12
         '
         Me.chkResidente12.AutoSize = True
+        Me.chkResidente12.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.chkResidente12.FontSize = MetroFramework.MetroCheckBoxSize.Medium
         Me.chkResidente12.FontWeight = MetroFramework.MetroCheckBoxWeight.Light
         Me.chkResidente12.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.chkResidente12.Location = New System.Drawing.Point(153, 18)
+        Me.chkResidente12.Location = New System.Drawing.Point(180, 9)
         Me.chkResidente12.Name = "chkResidente12"
         Me.chkResidente12.Size = New System.Drawing.Size(81, 19)
         Me.chkResidente12.TabIndex = 5
@@ -1011,7 +1206,7 @@ Partial Class ripartoACS
         '
         'nupMillesimi12
         '
-        Me.nupMillesimi12.DecimalPlaces = 1
+        Me.nupMillesimi12.DecimalPlaces = 2
         Me.nupMillesimi12.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.nupMillesimi12.Location = New System.Drawing.Point(72, 18)
         Me.nupMillesimi12.Maximum = New Decimal(New Integer() {1000, 0, 0, 0})
@@ -1023,25 +1218,49 @@ Partial Class ripartoACS
         '
         'gbUnitaImmobiliare11
         '
+        Me.gbUnitaImmobiliare11.Controls.Add(Me.cbNumPersone11)
+        Me.gbUnitaImmobiliare11.Controls.Add(Me.MetroLabel37)
         Me.gbUnitaImmobiliare11.Controls.Add(Me.chkResidente11)
         Me.gbUnitaImmobiliare11.Controls.Add(Me.MetroLabel21)
         Me.gbUnitaImmobiliare11.Controls.Add(Me.nupMillesimi11)
         Me.gbUnitaImmobiliare11.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gbUnitaImmobiliare11.Location = New System.Drawing.Point(15, 231)
         Me.gbUnitaImmobiliare11.Name = "gbUnitaImmobiliare11"
-        Me.gbUnitaImmobiliare11.Size = New System.Drawing.Size(268, 50)
+        Me.gbUnitaImmobiliare11.Size = New System.Drawing.Size(268, 55)
         Me.gbUnitaImmobiliare11.TabIndex = 3
         Me.gbUnitaImmobiliare11.TabStop = False
         Me.gbUnitaImmobiliare11.Text = "Unità immobiliare 11"
         Me.gbUnitaImmobiliare11.Visible = False
         '
+        'cbNumPersone11
+        '
+        Me.cbNumPersone11.DropDownHeight = 50
+        Me.cbNumPersone11.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbNumPersone11.IntegralHeight = False
+        Me.cbNumPersone11.ItemHeight = 13
+        Me.cbNumPersone11.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9"})
+        Me.cbNumPersone11.Location = New System.Drawing.Point(163, 29)
+        Me.cbNumPersone11.Name = "cbNumPersone11"
+        Me.cbNumPersone11.Size = New System.Drawing.Size(37, 21)
+        Me.cbNumPersone11.TabIndex = 10
+        '
+        'MetroLabel37
+        '
+        Me.MetroLabel37.AutoSize = True
+        Me.MetroLabel37.Location = New System.Drawing.Point(205, 30)
+        Me.MetroLabel37.Name = "MetroLabel37"
+        Me.MetroLabel37.Size = New System.Drawing.Size(56, 19)
+        Me.MetroLabel37.TabIndex = 9
+        Me.MetroLabel37.Text = "persone"
+        '
         'chkResidente11
         '
         Me.chkResidente11.AutoSize = True
+        Me.chkResidente11.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.chkResidente11.FontSize = MetroFramework.MetroCheckBoxSize.Medium
         Me.chkResidente11.FontWeight = MetroFramework.MetroCheckBoxWeight.Light
         Me.chkResidente11.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.chkResidente11.Location = New System.Drawing.Point(153, 18)
+        Me.chkResidente11.Location = New System.Drawing.Point(180, 9)
         Me.chkResidente11.Name = "chkResidente11"
         Me.chkResidente11.Size = New System.Drawing.Size(81, 19)
         Me.chkResidente11.TabIndex = 5
@@ -1059,7 +1278,7 @@ Partial Class ripartoACS
         '
         'nupMillesimi11
         '
-        Me.nupMillesimi11.DecimalPlaces = 1
+        Me.nupMillesimi11.DecimalPlaces = 2
         Me.nupMillesimi11.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.nupMillesimi11.Location = New System.Drawing.Point(72, 18)
         Me.nupMillesimi11.Maximum = New Decimal(New Integer() {1000, 0, 0, 0})
@@ -1071,25 +1290,49 @@ Partial Class ripartoACS
         '
         'gbUnitaImmobiliare10
         '
+        Me.gbUnitaImmobiliare10.Controls.Add(Me.cbNumPersone10)
+        Me.gbUnitaImmobiliare10.Controls.Add(Me.MetroLabel36)
         Me.gbUnitaImmobiliare10.Controls.Add(Me.chkResidente10)
         Me.gbUnitaImmobiliare10.Controls.Add(Me.MetroLabel22)
         Me.gbUnitaImmobiliare10.Controls.Add(Me.nupMillesimi10)
         Me.gbUnitaImmobiliare10.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gbUnitaImmobiliare10.Location = New System.Drawing.Point(15, 175)
         Me.gbUnitaImmobiliare10.Name = "gbUnitaImmobiliare10"
-        Me.gbUnitaImmobiliare10.Size = New System.Drawing.Size(268, 50)
+        Me.gbUnitaImmobiliare10.Size = New System.Drawing.Size(268, 55)
         Me.gbUnitaImmobiliare10.TabIndex = 3
         Me.gbUnitaImmobiliare10.TabStop = False
         Me.gbUnitaImmobiliare10.Text = "Unità immobiliare 10"
         Me.gbUnitaImmobiliare10.Visible = False
         '
+        'cbNumPersone10
+        '
+        Me.cbNumPersone10.DropDownHeight = 50
+        Me.cbNumPersone10.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbNumPersone10.IntegralHeight = False
+        Me.cbNumPersone10.ItemHeight = 13
+        Me.cbNumPersone10.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9"})
+        Me.cbNumPersone10.Location = New System.Drawing.Point(163, 29)
+        Me.cbNumPersone10.Name = "cbNumPersone10"
+        Me.cbNumPersone10.Size = New System.Drawing.Size(37, 21)
+        Me.cbNumPersone10.TabIndex = 10
+        '
+        'MetroLabel36
+        '
+        Me.MetroLabel36.AutoSize = True
+        Me.MetroLabel36.Location = New System.Drawing.Point(205, 30)
+        Me.MetroLabel36.Name = "MetroLabel36"
+        Me.MetroLabel36.Size = New System.Drawing.Size(56, 19)
+        Me.MetroLabel36.TabIndex = 9
+        Me.MetroLabel36.Text = "persone"
+        '
         'chkResidente10
         '
         Me.chkResidente10.AutoSize = True
+        Me.chkResidente10.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.chkResidente10.FontSize = MetroFramework.MetroCheckBoxSize.Medium
         Me.chkResidente10.FontWeight = MetroFramework.MetroCheckBoxWeight.Light
         Me.chkResidente10.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.chkResidente10.Location = New System.Drawing.Point(153, 18)
+        Me.chkResidente10.Location = New System.Drawing.Point(180, 9)
         Me.chkResidente10.Name = "chkResidente10"
         Me.chkResidente10.Size = New System.Drawing.Size(81, 19)
         Me.chkResidente10.TabIndex = 5
@@ -1107,7 +1350,7 @@ Partial Class ripartoACS
         '
         'nupMillesimi10
         '
-        Me.nupMillesimi10.DecimalPlaces = 1
+        Me.nupMillesimi10.DecimalPlaces = 2
         Me.nupMillesimi10.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.nupMillesimi10.Location = New System.Drawing.Point(72, 18)
         Me.nupMillesimi10.Maximum = New Decimal(New Integer() {1000, 0, 0, 0})
@@ -1119,25 +1362,49 @@ Partial Class ripartoACS
         '
         'gbUnitaImmobiliare9
         '
+        Me.gbUnitaImmobiliare9.Controls.Add(Me.cbNumPersone9)
+        Me.gbUnitaImmobiliare9.Controls.Add(Me.MetroLabel35)
         Me.gbUnitaImmobiliare9.Controls.Add(Me.chkResidente9)
         Me.gbUnitaImmobiliare9.Controls.Add(Me.MetroLabel23)
         Me.gbUnitaImmobiliare9.Controls.Add(Me.nupMillesimi9)
         Me.gbUnitaImmobiliare9.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gbUnitaImmobiliare9.Location = New System.Drawing.Point(15, 119)
         Me.gbUnitaImmobiliare9.Name = "gbUnitaImmobiliare9"
-        Me.gbUnitaImmobiliare9.Size = New System.Drawing.Size(268, 50)
+        Me.gbUnitaImmobiliare9.Size = New System.Drawing.Size(268, 55)
         Me.gbUnitaImmobiliare9.TabIndex = 3
         Me.gbUnitaImmobiliare9.TabStop = False
         Me.gbUnitaImmobiliare9.Text = "Unità immobiliare 9"
         Me.gbUnitaImmobiliare9.Visible = False
         '
+        'cbNumPersone9
+        '
+        Me.cbNumPersone9.DropDownHeight = 50
+        Me.cbNumPersone9.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbNumPersone9.IntegralHeight = False
+        Me.cbNumPersone9.ItemHeight = 13
+        Me.cbNumPersone9.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9"})
+        Me.cbNumPersone9.Location = New System.Drawing.Point(163, 29)
+        Me.cbNumPersone9.Name = "cbNumPersone9"
+        Me.cbNumPersone9.Size = New System.Drawing.Size(37, 21)
+        Me.cbNumPersone9.TabIndex = 10
+        '
+        'MetroLabel35
+        '
+        Me.MetroLabel35.AutoSize = True
+        Me.MetroLabel35.Location = New System.Drawing.Point(205, 30)
+        Me.MetroLabel35.Name = "MetroLabel35"
+        Me.MetroLabel35.Size = New System.Drawing.Size(56, 19)
+        Me.MetroLabel35.TabIndex = 9
+        Me.MetroLabel35.Text = "persone"
+        '
         'chkResidente9
         '
         Me.chkResidente9.AutoSize = True
+        Me.chkResidente9.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.chkResidente9.FontSize = MetroFramework.MetroCheckBoxSize.Medium
         Me.chkResidente9.FontWeight = MetroFramework.MetroCheckBoxWeight.Light
         Me.chkResidente9.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.chkResidente9.Location = New System.Drawing.Point(153, 18)
+        Me.chkResidente9.Location = New System.Drawing.Point(180, 9)
         Me.chkResidente9.Name = "chkResidente9"
         Me.chkResidente9.Size = New System.Drawing.Size(81, 19)
         Me.chkResidente9.TabIndex = 5
@@ -1155,7 +1422,7 @@ Partial Class ripartoACS
         '
         'nupMillesimi9
         '
-        Me.nupMillesimi9.DecimalPlaces = 1
+        Me.nupMillesimi9.DecimalPlaces = 2
         Me.nupMillesimi9.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.nupMillesimi9.Location = New System.Drawing.Point(72, 18)
         Me.nupMillesimi9.Maximum = New Decimal(New Integer() {1000, 0, 0, 0})
@@ -1167,25 +1434,49 @@ Partial Class ripartoACS
         '
         'gbUnitaImmobiliare8
         '
+        Me.gbUnitaImmobiliare8.Controls.Add(Me.cbNumPersone8)
+        Me.gbUnitaImmobiliare8.Controls.Add(Me.MetroLabel34)
         Me.gbUnitaImmobiliare8.Controls.Add(Me.chkResidente8)
         Me.gbUnitaImmobiliare8.Controls.Add(Me.MetroLabel24)
         Me.gbUnitaImmobiliare8.Controls.Add(Me.nupMillesimi8)
         Me.gbUnitaImmobiliare8.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gbUnitaImmobiliare8.Location = New System.Drawing.Point(16, 63)
         Me.gbUnitaImmobiliare8.Name = "gbUnitaImmobiliare8"
-        Me.gbUnitaImmobiliare8.Size = New System.Drawing.Size(268, 50)
+        Me.gbUnitaImmobiliare8.Size = New System.Drawing.Size(268, 55)
         Me.gbUnitaImmobiliare8.TabIndex = 3
         Me.gbUnitaImmobiliare8.TabStop = False
         Me.gbUnitaImmobiliare8.Text = "Unità immobiliare 8"
         Me.gbUnitaImmobiliare8.Visible = False
         '
+        'cbNumPersone8
+        '
+        Me.cbNumPersone8.DropDownHeight = 50
+        Me.cbNumPersone8.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbNumPersone8.IntegralHeight = False
+        Me.cbNumPersone8.ItemHeight = 13
+        Me.cbNumPersone8.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9"})
+        Me.cbNumPersone8.Location = New System.Drawing.Point(163, 29)
+        Me.cbNumPersone8.Name = "cbNumPersone8"
+        Me.cbNumPersone8.Size = New System.Drawing.Size(37, 21)
+        Me.cbNumPersone8.TabIndex = 10
+        '
+        'MetroLabel34
+        '
+        Me.MetroLabel34.AutoSize = True
+        Me.MetroLabel34.Location = New System.Drawing.Point(205, 30)
+        Me.MetroLabel34.Name = "MetroLabel34"
+        Me.MetroLabel34.Size = New System.Drawing.Size(56, 19)
+        Me.MetroLabel34.TabIndex = 9
+        Me.MetroLabel34.Text = "persone"
+        '
         'chkResidente8
         '
         Me.chkResidente8.AutoSize = True
+        Me.chkResidente8.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.chkResidente8.FontSize = MetroFramework.MetroCheckBoxSize.Medium
         Me.chkResidente8.FontWeight = MetroFramework.MetroCheckBoxWeight.Light
         Me.chkResidente8.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.chkResidente8.Location = New System.Drawing.Point(153, 18)
+        Me.chkResidente8.Location = New System.Drawing.Point(180, 9)
         Me.chkResidente8.Name = "chkResidente8"
         Me.chkResidente8.Size = New System.Drawing.Size(81, 19)
         Me.chkResidente8.TabIndex = 5
@@ -1203,7 +1494,7 @@ Partial Class ripartoACS
         '
         'nupMillesimi8
         '
-        Me.nupMillesimi8.DecimalPlaces = 1
+        Me.nupMillesimi8.DecimalPlaces = 2
         Me.nupMillesimi8.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.nupMillesimi8.Location = New System.Drawing.Point(72, 18)
         Me.nupMillesimi8.Maximum = New Decimal(New Integer() {1000, 0, 0, 0})
@@ -1215,24 +1506,48 @@ Partial Class ripartoACS
         '
         'gbUnitaImmobiliare7
         '
+        Me.gbUnitaImmobiliare7.Controls.Add(Me.cbNumPersone7)
+        Me.gbUnitaImmobiliare7.Controls.Add(Me.MetroLabel33)
         Me.gbUnitaImmobiliare7.Controls.Add(Me.chkResidente7)
         Me.gbUnitaImmobiliare7.Controls.Add(Me.MetroLabel25)
         Me.gbUnitaImmobiliare7.Controls.Add(Me.nupMillesimi7)
         Me.gbUnitaImmobiliare7.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gbUnitaImmobiliare7.Location = New System.Drawing.Point(15, 7)
         Me.gbUnitaImmobiliare7.Name = "gbUnitaImmobiliare7"
-        Me.gbUnitaImmobiliare7.Size = New System.Drawing.Size(268, 50)
+        Me.gbUnitaImmobiliare7.Size = New System.Drawing.Size(268, 55)
         Me.gbUnitaImmobiliare7.TabIndex = 3
         Me.gbUnitaImmobiliare7.TabStop = False
         Me.gbUnitaImmobiliare7.Text = "Unità immobiliare 7"
         '
+        'cbNumPersone7
+        '
+        Me.cbNumPersone7.DropDownHeight = 50
+        Me.cbNumPersone7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbNumPersone7.IntegralHeight = False
+        Me.cbNumPersone7.ItemHeight = 13
+        Me.cbNumPersone7.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9"})
+        Me.cbNumPersone7.Location = New System.Drawing.Point(163, 29)
+        Me.cbNumPersone7.Name = "cbNumPersone7"
+        Me.cbNumPersone7.Size = New System.Drawing.Size(37, 21)
+        Me.cbNumPersone7.TabIndex = 8
+        '
+        'MetroLabel33
+        '
+        Me.MetroLabel33.AutoSize = True
+        Me.MetroLabel33.Location = New System.Drawing.Point(205, 30)
+        Me.MetroLabel33.Name = "MetroLabel33"
+        Me.MetroLabel33.Size = New System.Drawing.Size(56, 19)
+        Me.MetroLabel33.TabIndex = 7
+        Me.MetroLabel33.Text = "persone"
+        '
         'chkResidente7
         '
         Me.chkResidente7.AutoSize = True
+        Me.chkResidente7.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.chkResidente7.FontSize = MetroFramework.MetroCheckBoxSize.Medium
         Me.chkResidente7.FontWeight = MetroFramework.MetroCheckBoxWeight.Light
         Me.chkResidente7.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.chkResidente7.Location = New System.Drawing.Point(153, 18)
+        Me.chkResidente7.Location = New System.Drawing.Point(180, 9)
         Me.chkResidente7.Name = "chkResidente7"
         Me.chkResidente7.Size = New System.Drawing.Size(81, 19)
         Me.chkResidente7.TabIndex = 5
@@ -1250,7 +1565,7 @@ Partial Class ripartoACS
         '
         'nupMillesimi7
         '
-        Me.nupMillesimi7.DecimalPlaces = 1
+        Me.nupMillesimi7.DecimalPlaces = 2
         Me.nupMillesimi7.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.nupMillesimi7.Location = New System.Drawing.Point(72, 18)
         Me.nupMillesimi7.Maximum = New Decimal(New Integer() {1000, 0, 0, 0})
@@ -1314,6 +1629,48 @@ Partial Class ripartoACS
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Tariffe non residenti"
         '
+        'btnTariffaDepurazioneNonResidenti
+        '
+        Me.btnTariffaDepurazioneNonResidenti.ActiveControl = Nothing
+        Me.btnTariffaDepurazioneNonResidenti.Location = New System.Drawing.Point(310, 36)
+        Me.btnTariffaDepurazioneNonResidenti.Name = "btnTariffaDepurazioneNonResidenti"
+        Me.btnTariffaDepurazioneNonResidenti.Size = New System.Drawing.Size(100, 40)
+        Me.btnTariffaDepurazioneNonResidenti.Style = MetroFramework.MetroColorStyle.Brown
+        Me.btnTariffaDepurazioneNonResidenti.TabIndex = 2
+        Me.btnTariffaDepurazioneNonResidenti.Text = "Depurazione"
+        Me.btnTariffaDepurazioneNonResidenti.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnTariffaDepurazioneNonResidenti.TileTextFontSize = MetroFramework.MetroTileTextSize.Small
+        Me.btnTariffaDepurazioneNonResidenti.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular
+        Me.btnTariffaDepurazioneNonResidenti.UseSelectable = True
+        '
+        'btnTariffaFognaturaNonResidenti
+        '
+        Me.btnTariffaFognaturaNonResidenti.ActiveControl = Nothing
+        Me.btnTariffaFognaturaNonResidenti.Location = New System.Drawing.Point(184, 36)
+        Me.btnTariffaFognaturaNonResidenti.Name = "btnTariffaFognaturaNonResidenti"
+        Me.btnTariffaFognaturaNonResidenti.Size = New System.Drawing.Size(100, 40)
+        Me.btnTariffaFognaturaNonResidenti.Style = MetroFramework.MetroColorStyle.Brown
+        Me.btnTariffaFognaturaNonResidenti.TabIndex = 2
+        Me.btnTariffaFognaturaNonResidenti.Text = "Fognatura"
+        Me.btnTariffaFognaturaNonResidenti.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnTariffaFognaturaNonResidenti.TileTextFontSize = MetroFramework.MetroTileTextSize.Small
+        Me.btnTariffaFognaturaNonResidenti.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular
+        Me.btnTariffaFognaturaNonResidenti.UseSelectable = True
+        '
+        'btnTariffaAcquedottoNonResidenti
+        '
+        Me.btnTariffaAcquedottoNonResidenti.ActiveControl = Nothing
+        Me.btnTariffaAcquedottoNonResidenti.Location = New System.Drawing.Point(58, 36)
+        Me.btnTariffaAcquedottoNonResidenti.Name = "btnTariffaAcquedottoNonResidenti"
+        Me.btnTariffaAcquedottoNonResidenti.Size = New System.Drawing.Size(100, 40)
+        Me.btnTariffaAcquedottoNonResidenti.Style = MetroFramework.MetroColorStyle.Brown
+        Me.btnTariffaAcquedottoNonResidenti.TabIndex = 2
+        Me.btnTariffaAcquedottoNonResidenti.Text = "Acquedotto"
+        Me.btnTariffaAcquedottoNonResidenti.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnTariffaAcquedottoNonResidenti.TileTextFontSize = MetroFramework.MetroTileTextSize.Small
+        Me.btnTariffaAcquedottoNonResidenti.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular
+        Me.btnTariffaAcquedottoNonResidenti.UseSelectable = True
+        '
         'GroupBox3
         '
         Me.GroupBox3.Controls.Add(Me.btnTariffaDepurazioneResidenti)
@@ -1325,6 +1682,45 @@ Partial Class ripartoACS
         Me.GroupBox3.TabIndex = 0
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Tariffe residenti"
+        '
+        'btnTariffaDepurazioneResidenti
+        '
+        Me.btnTariffaDepurazioneResidenti.ActiveControl = Nothing
+        Me.btnTariffaDepurazioneResidenti.Location = New System.Drawing.Point(310, 34)
+        Me.btnTariffaDepurazioneResidenti.Name = "btnTariffaDepurazioneResidenti"
+        Me.btnTariffaDepurazioneResidenti.Size = New System.Drawing.Size(100, 40)
+        Me.btnTariffaDepurazioneResidenti.TabIndex = 2
+        Me.btnTariffaDepurazioneResidenti.Text = "Depurazione"
+        Me.btnTariffaDepurazioneResidenti.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnTariffaDepurazioneResidenti.TileTextFontSize = MetroFramework.MetroTileTextSize.Small
+        Me.btnTariffaDepurazioneResidenti.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular
+        Me.btnTariffaDepurazioneResidenti.UseSelectable = True
+        '
+        'btnTariffaFognaturaResidenti
+        '
+        Me.btnTariffaFognaturaResidenti.ActiveControl = Nothing
+        Me.btnTariffaFognaturaResidenti.Location = New System.Drawing.Point(184, 34)
+        Me.btnTariffaFognaturaResidenti.Name = "btnTariffaFognaturaResidenti"
+        Me.btnTariffaFognaturaResidenti.Size = New System.Drawing.Size(100, 40)
+        Me.btnTariffaFognaturaResidenti.TabIndex = 2
+        Me.btnTariffaFognaturaResidenti.Text = "Fognatura"
+        Me.btnTariffaFognaturaResidenti.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnTariffaFognaturaResidenti.TileTextFontSize = MetroFramework.MetroTileTextSize.Small
+        Me.btnTariffaFognaturaResidenti.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular
+        Me.btnTariffaFognaturaResidenti.UseSelectable = True
+        '
+        'btnTariffaAcquedottoResidenti
+        '
+        Me.btnTariffaAcquedottoResidenti.ActiveControl = Nothing
+        Me.btnTariffaAcquedottoResidenti.Location = New System.Drawing.Point(58, 34)
+        Me.btnTariffaAcquedottoResidenti.Name = "btnTariffaAcquedottoResidenti"
+        Me.btnTariffaAcquedottoResidenti.Size = New System.Drawing.Size(100, 40)
+        Me.btnTariffaAcquedottoResidenti.TabIndex = 2
+        Me.btnTariffaAcquedottoResidenti.Text = "Acquedotto"
+        Me.btnTariffaAcquedottoResidenti.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnTariffaAcquedottoResidenti.TileTextFontSize = MetroFramework.MetroTileTextSize.Small
+        Me.btnTariffaAcquedottoResidenti.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular
+        Me.btnTariffaAcquedottoResidenti.UseSelectable = True
         '
         'MetroTile6
         '
@@ -1423,102 +1819,44 @@ Partial Class ripartoACS
         '
         Me.TimerStatusbar.Interval = 15000
         '
-        'btnTariffaAcquedottoResidenti
+        'nupImportoDaRipartire
         '
-        Me.btnTariffaAcquedottoResidenti.ActiveControl = Nothing
-        Me.btnTariffaAcquedottoResidenti.Location = New System.Drawing.Point(58, 34)
-        Me.btnTariffaAcquedottoResidenti.Name = "btnTariffaAcquedottoResidenti"
-        Me.btnTariffaAcquedottoResidenti.Size = New System.Drawing.Size(100, 40)
-        Me.btnTariffaAcquedottoResidenti.TabIndex = 2
-        Me.btnTariffaAcquedottoResidenti.Text = "Acquedotto"
-        Me.btnTariffaAcquedottoResidenti.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.btnTariffaAcquedottoResidenti.TileTextFontSize = MetroFramework.MetroTileTextSize.Small
-        Me.btnTariffaAcquedottoResidenti.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular
-        Me.btnTariffaAcquedottoResidenti.UseSelectable = True
+        Me.nupImportoDaRipartire.DecimalPlaces = 2
+        Me.nupImportoDaRipartire.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.nupImportoDaRipartire.Location = New System.Drawing.Point(454, 64)
+        Me.nupImportoDaRipartire.Maximum = New Decimal(New Integer() {99999, 0, 0, 0})
+        Me.nupImportoDaRipartire.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.nupImportoDaRipartire.Name = "nupImportoDaRipartire"
+        Me.nupImportoDaRipartire.Size = New System.Drawing.Size(70, 22)
+        Me.nupImportoDaRipartire.TabIndex = 0
+        Me.nupImportoDaRipartire.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
-        'btnTariffaFognaturaResidenti
+        'MetroLabel39
         '
-        Me.btnTariffaFognaturaResidenti.ActiveControl = Nothing
-        Me.btnTariffaFognaturaResidenti.Location = New System.Drawing.Point(184, 34)
-        Me.btnTariffaFognaturaResidenti.Name = "btnTariffaFognaturaResidenti"
-        Me.btnTariffaFognaturaResidenti.Size = New System.Drawing.Size(100, 40)
-        Me.btnTariffaFognaturaResidenti.TabIndex = 2
-        Me.btnTariffaFognaturaResidenti.Text = "Fognatura"
-        Me.btnTariffaFognaturaResidenti.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.btnTariffaFognaturaResidenti.TileTextFontSize = MetroFramework.MetroTileTextSize.Small
-        Me.btnTariffaFognaturaResidenti.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular
-        Me.btnTariffaFognaturaResidenti.UseSelectable = True
-        '
-        'btnTariffaDepurazioneResidenti
-        '
-        Me.btnTariffaDepurazioneResidenti.ActiveControl = Nothing
-        Me.btnTariffaDepurazioneResidenti.Location = New System.Drawing.Point(310, 34)
-        Me.btnTariffaDepurazioneResidenti.Name = "btnTariffaDepurazioneResidenti"
-        Me.btnTariffaDepurazioneResidenti.Size = New System.Drawing.Size(100, 40)
-        Me.btnTariffaDepurazioneResidenti.TabIndex = 2
-        Me.btnTariffaDepurazioneResidenti.Text = "Depurazione"
-        Me.btnTariffaDepurazioneResidenti.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.btnTariffaDepurazioneResidenti.TileTextFontSize = MetroFramework.MetroTileTextSize.Small
-        Me.btnTariffaDepurazioneResidenti.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular
-        Me.btnTariffaDepurazioneResidenti.UseSelectable = True
-        '
-        'btnTariffaAcquedottoNonResidenti
-        '
-        Me.btnTariffaAcquedottoNonResidenti.ActiveControl = Nothing
-        Me.btnTariffaAcquedottoNonResidenti.Location = New System.Drawing.Point(58, 36)
-        Me.btnTariffaAcquedottoNonResidenti.Name = "btnTariffaAcquedottoNonResidenti"
-        Me.btnTariffaAcquedottoNonResidenti.Size = New System.Drawing.Size(100, 40)
-        Me.btnTariffaAcquedottoNonResidenti.Style = MetroFramework.MetroColorStyle.Brown
-        Me.btnTariffaAcquedottoNonResidenti.TabIndex = 2
-        Me.btnTariffaAcquedottoNonResidenti.Text = "Acquedotto"
-        Me.btnTariffaAcquedottoNonResidenti.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.btnTariffaAcquedottoNonResidenti.TileTextFontSize = MetroFramework.MetroTileTextSize.Small
-        Me.btnTariffaAcquedottoNonResidenti.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular
-        Me.btnTariffaAcquedottoNonResidenti.UseSelectable = True
-        '
-        'btnTariffaFognaturaNonResidenti
-        '
-        Me.btnTariffaFognaturaNonResidenti.ActiveControl = Nothing
-        Me.btnTariffaFognaturaNonResidenti.Location = New System.Drawing.Point(184, 36)
-        Me.btnTariffaFognaturaNonResidenti.Name = "btnTariffaFognaturaNonResidenti"
-        Me.btnTariffaFognaturaNonResidenti.Size = New System.Drawing.Size(100, 40)
-        Me.btnTariffaFognaturaNonResidenti.Style = MetroFramework.MetroColorStyle.Brown
-        Me.btnTariffaFognaturaNonResidenti.TabIndex = 2
-        Me.btnTariffaFognaturaNonResidenti.Text = "Fognatura"
-        Me.btnTariffaFognaturaNonResidenti.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.btnTariffaFognaturaNonResidenti.TileTextFontSize = MetroFramework.MetroTileTextSize.Small
-        Me.btnTariffaFognaturaNonResidenti.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular
-        Me.btnTariffaFognaturaNonResidenti.UseSelectable = True
-        '
-        'btnTariffaDepurazioneNonResidenti
-        '
-        Me.btnTariffaDepurazioneNonResidenti.ActiveControl = Nothing
-        Me.btnTariffaDepurazioneNonResidenti.Location = New System.Drawing.Point(310, 36)
-        Me.btnTariffaDepurazioneNonResidenti.Name = "btnTariffaDepurazioneNonResidenti"
-        Me.btnTariffaDepurazioneNonResidenti.Size = New System.Drawing.Size(100, 40)
-        Me.btnTariffaDepurazioneNonResidenti.Style = MetroFramework.MetroColorStyle.Brown
-        Me.btnTariffaDepurazioneNonResidenti.TabIndex = 2
-        Me.btnTariffaDepurazioneNonResidenti.Text = "Depurazione"
-        Me.btnTariffaDepurazioneNonResidenti.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.btnTariffaDepurazioneNonResidenti.TileTextFontSize = MetroFramework.MetroTileTextSize.Small
-        Me.btnTariffaDepurazioneNonResidenti.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular
-        Me.btnTariffaDepurazioneNonResidenti.UseSelectable = True
+        Me.MetroLabel39.AutoSize = True
+        Me.MetroLabel39.Location = New System.Drawing.Point(319, 64)
+        Me.MetroLabel39.Name = "MetroLabel39"
+        Me.MetroLabel39.Size = New System.Drawing.Size(129, 19)
+        Me.MetroLabel39.TabIndex = 2
+        Me.MetroLabel39.Text = "Importo da ripartire"
         '
         'ripartoACS
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(640, 520)
+        Me.Controls.Add(Me.mpPagina2)
+        Me.Controls.Add(Me.mpPagina1)
         Me.Controls.Add(Me.mlStatusBar)
         Me.Controls.Add(Me.MetroTile4)
+        Me.Controls.Add(Me.MetroLabel39)
         Me.Controls.Add(Me.MetroTile5)
-        Me.Controls.Add(Me.mpConfigurazioneRiparto)
-        Me.Controls.Add(Me.mpPagina1)
+        Me.Controls.Add(Me.nupImportoDaRipartire)
         Me.Controls.Add(Me.btnCambiaPagina)
-        Me.Controls.Add(Me.mpPagina2)
         Me.Controls.Add(Me.MetroLabel1)
         Me.Controls.Add(Me.MetroPanel1)
         Me.Controls.Add(Me.nupQTAUnitaImmobiliari)
+        Me.Controls.Add(Me.mpConfigurazioneRiparto)
         Me.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MaximizeBox = False
         Me.Name = "ripartoACS"
@@ -1610,6 +1948,7 @@ Partial Class ripartoACS
         Me.GroupBox2.PerformLayout()
         CType(Me.nupPercentualeConsumo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.nupPercentualeMillesimi, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nupImportoDaRipartire, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1727,4 +2066,30 @@ Partial Class ripartoACS
     Friend WithEvents btnTariffaDepurazioneResidenti As MetroFramework.Controls.MetroTile
     Friend WithEvents btnTariffaFognaturaResidenti As MetroFramework.Controls.MetroTile
     Friend WithEvents btnTariffaAcquedottoResidenti As MetroFramework.Controls.MetroTile
+    Friend WithEvents cbNumPersone1 As ComboBox
+    Friend WithEvents MetroLabel26 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroLabel28 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents cbNumPersone2 As ComboBox
+    Friend WithEvents MetroLabel29 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents cbNumPersone3 As ComboBox
+    Friend WithEvents MetroLabel30 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents cbNumPersone4 As ComboBox
+    Friend WithEvents MetroLabel31 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents cbNumPersone5 As ComboBox
+    Friend WithEvents MetroLabel32 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents cbNumPersone6 As ComboBox
+    Friend WithEvents cbNumPersone7 As ComboBox
+    Friend WithEvents MetroLabel33 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents cbNumPersone12 As ComboBox
+    Friend WithEvents MetroLabel38 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents cbNumPersone11 As ComboBox
+    Friend WithEvents MetroLabel37 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents cbNumPersone10 As ComboBox
+    Friend WithEvents MetroLabel36 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents cbNumPersone9 As ComboBox
+    Friend WithEvents MetroLabel35 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents cbNumPersone8 As ComboBox
+    Friend WithEvents MetroLabel34 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroLabel39 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents nupImportoDaRipartire As NumericUpDown
 End Class

@@ -2,6 +2,7 @@
 
 Public Class ripartoACS
 
+    Public NomeUnitaImmobiliare As String
     Public mySender As String
     Public tariffaResidentiAcquedotto(,) As Double = {
     {0, 19, 16.813, 0.538, 0.004, 0.009, 0.005},
@@ -44,7 +45,7 @@ Public Class ripartoACS
         Dim sfd As New SaveFileDialog
         sfd.Filter = "File di riparto (*.racs)|*.racs|Tutti i file|*.*"
 #If DEBUG Then
-        sfd.InitialDirectory = Path.GetTempPath
+        'sfd.InitialDirectory = Path.GetTempPath
 #End If
         Dim result As DialogResult = sfd.ShowDialog()
 
@@ -70,11 +71,20 @@ Public Class ripartoACS
             For i = nupQTAUnitaImmobiliari.Minimum To nupQTAUnitaImmobiliari.Maximum
                 Dim mmtemp As Double = DirectCast(Controls.Find("nupMillesimi" & i.ToString, True)(0), NumericUpDown).Value
                 bf.Serialize(fStream, mmtemp)
-                Dim chktemp As Double = DirectCast(Controls.Find("chkResidente" & i.ToString, True)(0), MetroFramework.Controls.MetroCheckBox).Checked
+                Dim chktemp As Boolean = DirectCast(Controls.Find("chkResidente" & i.ToString, True)(0), MetroFramework.Controls.MetroCheckBox).Checked
                 bf.Serialize(fStream, chktemp)
                 Dim consumotemp As Double = DirectCast(Controls.Find("nupConsumo" & i.ToString, True)(0), NumericUpDown).Value
                 bf.Serialize(fStream, consumotemp)
+                Dim nupPersonetemp As Integer = DirectCast(Controls.Find("cbNumPersone" & i.ToString, True)?(0), ComboBox).SelectedIndex
+                bf.Serialize(fStream, nupPersonetemp)
+                Dim gbUnitatemp As String = DirectCast(Controls.Find("gbUnitaImmobiliare" & i.ToString, True)?(0), GroupBox).Text
+                bf.Serialize(fStream, gbUnitatemp)
+                Dim gbConsumotemp As String = DirectCast(Controls.Find("gbconsumo" & i.ToString, True)?(0), GroupBox).Text
+                bf.Serialize(fStream, gbConsumotemp)
             Next
+
+            bf.Serialize(fStream, nupImportoDaRipartire.Value)
+
 
             mlStatusBar.Text = "File salvato correttamente."
 
@@ -90,10 +100,11 @@ Public Class ripartoACS
     End Sub
     Private Sub MetroTile4_Click(sender As Object, e As EventArgs) Handles MetroTile4.Click
 
+
         Dim ofd As New OpenFileDialog
         ofd.Filter = "File di riparto (*.racs)|*.racs|Tutti i file|*.*"
 #If DEBUG Then
-        ofd.InitialDirectory = Path.GetTempPath
+        'ofd.InitialDirectory = Path.GetTempPath
 #End If
         Dim result As DialogResult = ofd.ShowDialog()
 
@@ -119,7 +130,13 @@ Public Class ripartoACS
                 DirectCast(Controls.Find("nupMillesimi" & i.ToString, True)(0), NumericUpDown).Value = bf.Deserialize(fStream)
                 DirectCast(Controls.Find("chkResidente" & i.ToString, True)(0), MetroFramework.Controls.MetroCheckBox).Checked = bf.Deserialize(fStream)
                 DirectCast(Controls.Find("nupConsumo" & i.ToString, True)(0), NumericUpDown).Value = bf.Deserialize(fStream)
+                DirectCast(Controls.Find("cbNumPersone" & i.ToString, True)?(0), ComboBox).SelectedIndex = bf.Deserialize(fStream)
+                DirectCast(Controls.Find("gbUnitaImmobiliare" & i.ToString, True)?(0), GroupBox).Text = bf.Deserialize(fStream)
+                DirectCast(Controls.Find("gbconsumo" & i.ToString, True)?(0), GroupBox).Text = bf.Deserialize(fStream)
+
             Next
+
+            nupImportoDaRipartire.Value = bf.Deserialize(fStream)
 
             mlStatusBar.Text = "File aperto correttamente."
 
@@ -335,6 +352,43 @@ Public Class ripartoACS
             MsgBox("La somma millesimi è superiore a 1001. Verificare.")
             Exit Sub
         End If
+
+        Dim newRipartizione = New formRipartizione
+        newRipartizione.Show()
+
+        newRipartizione.tabellaRipartizione.Columns(1).DefaultCellStyle.Format = "€ #.#0"
+        newRipartizione.tabellaRipartizione.Columns(2).DefaultCellStyle.Format = "€ #.#0"
+        newRipartizione.tabellaRipartizione.Columns(3).DefaultCellStyle.Format = "€ #.#0"
+
+        Dim totaleMetriCubi As Double
+
+        For i = nupQTAUnitaImmobiliari.Minimum To nupQTAUnitaImmobiliari.Maximum
+            totaleMetriCubi += DirectCast(Controls.Find("nupConsumo" & i.ToString, True)?(0), NumericUpDown).Value
+        Next
+
+        Dim totaleRipartizioneMillesimi As Double
+        Dim totaleRipartizioneConsumo As Double
+        Dim totaleRipartizione As Double
+
+
+        For i = nupQTAUnitaImmobiliari.Minimum To nupQTAUnitaImmobiliari.Maximum
+
+            Dim cell1 As String = DirectCast(Controls.Find("gbUnitaImmobiliare" & i.ToString, True)?(0), GroupBox).Text
+            Dim cell2 As Double = nupImportoDaRipartire.Value * (nupPercentualeMillesimi.Value / 100) * (DirectCast(Controls.Find("nupMillesimi" & i.ToString, True)?(0), NumericUpDown).Value / 1000)
+            Dim cell3 As Double = nupImportoDaRipartire.Value * (nupPercentualeConsumo.Value / 100) * (DirectCast(Controls.Find("nupConsumo" & i.ToString, True)?(0), NumericUpDown).Value / totaleMetriCubi)
+            Dim cell4 As Double = cell2 + cell3
+
+            totaleRipartizioneMillesimi += cell2
+            totaleRipartizioneConsumo += cell3
+            totaleRipartizione += cell4
+
+            newRipartizione.tabellaRipartizione.Rows.Add({cell1, cell2, cell3, cell4})
+
+        Next
+
+        newRipartizione.tabellaRipartizione.Rows.Add({"Totali", totaleRipartizioneMillesimi, totaleRipartizioneConsumo, totaleRipartizione})
+
+
     End Sub
     Private Sub MetroTile6_Click(sender As Object, e As EventArgs) Handles MetroTile6.Click
         tariffaResidentiAcquedotto = {
@@ -384,5 +438,33 @@ Public Class ripartoACS
     Private Sub TimerStatusbar_Tick(sender As Object, e As EventArgs) Handles TimerStatusbar.Tick
         mlStatusBar.Text = ""
         TimerStatusbar.Enabled = False
+    End Sub
+
+    Private Sub RipartoACS_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        For i = nupQTAUnitaImmobiliari.Minimum To nupQTAUnitaImmobiliari.Maximum
+            If DirectCast(Controls.Find("cbNumPersone" & i.ToString, True)?(0), ComboBox).SelectedIndex = -1 Then
+                DirectCast(Controls.Find("cbNumPersone" & i.ToString, True)?(0), ComboBox).SelectedIndex = 0
+            End If
+
+            AddHandler DirectCast(Controls.Find("gbUnitaImmobiliare" & i.ToString, True)?(0), GroupBox).DoubleClick, AddressOf GbUnitaImmobiliare_DoubleClick
+
+        Next
+
+
+    End Sub
+
+    Private Sub GbUnitaImmobiliare_DoubleClick(sender As Object, e As EventArgs)
+        Dim formNome As Form = New formNomeUnitaImm
+        Dim result As DialogResult = formNome.ShowDialog()
+        If result = DialogResult.OK And NomeUnitaImmobiliare <> "" Then
+            'Dim NumeroUnitaImmobiliare As String = sender.text.ToString.Split(" ")(2)
+            sender.text = "Unità immobiliare " & NomeUnitaImmobiliare
+            For i = nupQTAUnitaImmobiliari.Minimum To nupQTAUnitaImmobiliari.Maximum
+                If DirectCast(Controls.Find("gbUnitaImmobiliare" & i.ToString, True)?(0), GroupBox).Text.Contains(NomeUnitaImmobiliare) Then
+                    DirectCast(Controls.Find("gbconsumo" & i.ToString, True)?(0), GroupBox).Text = "Consumo " & NomeUnitaImmobiliare
+                End If
+            Next
+        End If
     End Sub
 End Class

@@ -73,6 +73,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="formNomeUnitaImm.Designer.vb">
+      <DependentUpon>formNomeUnitaImm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formNomeUnitaImm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formRipartizione.Designer.vb">
+      <DependentUpon>formRipartizione.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formRipartizione.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="formTariffe.Designer.vb">
       <DependentUpon>formTariffe.vb</DependentUpon>
     </Compile>
@@ -103,6 +115,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="formNomeUnitaImm.resx">
+      <DependentUpon>formNomeUnitaImm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formRipartizione.resx">
+      <DependentUpon>formRipartizione.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formTariffe.resx">
       <DependentUpon>formTariffe.vb</DependentUpon>
     </EmbeddedResource>
