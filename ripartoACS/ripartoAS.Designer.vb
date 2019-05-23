@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class ripartoACS
+Partial Class ripartoAS
     Inherits MetroFramework.Forms.MetroForm
 
     'Form esegue l'override del metodo Dispose per pulire l'elenco dei componenti.
@@ -23,9 +23,10 @@ Partial Class ripartoACS
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ripartoACS))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ripartoAS))
         Me.nupQTAUnitaImmobiliari = New System.Windows.Forms.NumericUpDown()
         Me.MetroPanel1 = New MetroFramework.Controls.MetroPanel()
+        Me.MetroTile7 = New MetroFramework.Controls.MetroTile()
         Me.MetroTile3 = New MetroFramework.Controls.MetroTile()
         Me.MetroTile2 = New MetroFramework.Controls.MetroTile()
         Me.MetroTile1 = New MetroFramework.Controls.MetroTile()
@@ -238,6 +239,7 @@ Partial Class ripartoACS
         '
         'MetroPanel1
         '
+        Me.MetroPanel1.Controls.Add(Me.MetroTile7)
         Me.MetroPanel1.Controls.Add(Me.MetroTile3)
         Me.MetroPanel1.Controls.Add(Me.MetroTile2)
         Me.MetroPanel1.Controls.Add(Me.MetroTile1)
@@ -246,11 +248,22 @@ Partial Class ripartoACS
         Me.MetroPanel1.HorizontalScrollbarSize = 10
         Me.MetroPanel1.Location = New System.Drawing.Point(23, 87)
         Me.MetroPanel1.Name = "MetroPanel1"
-        Me.MetroPanel1.Size = New System.Drawing.Size(102, 314)
+        Me.MetroPanel1.Size = New System.Drawing.Size(102, 410)
         Me.MetroPanel1.TabIndex = 1
         Me.MetroPanel1.VerticalScrollbarBarColor = True
         Me.MetroPanel1.VerticalScrollbarHighlightOnWheel = False
         Me.MetroPanel1.VerticalScrollbarSize = 10
+        '
+        'MetroTile7
+        '
+        Me.MetroTile7.ActiveControl = Nothing
+        Me.MetroTile7.Location = New System.Drawing.Point(3, 309)
+        Me.MetroTile7.Name = "MetroTile7"
+        Me.MetroTile7.Size = New System.Drawing.Size(96, 96)
+        Me.MetroTile7.Style = MetroFramework.MetroColorStyle.Pink
+        Me.MetroTile7.TabIndex = 3
+        Me.MetroTile7.Text = "Info su..."
+        Me.MetroTile7.UseSelectable = True
         '
         'MetroTile3
         '
@@ -1811,7 +1824,7 @@ Partial Class ripartoACS
         'mlStatusBar
         '
         Me.mlStatusBar.AutoSize = True
-        Me.mlStatusBar.Location = New System.Drawing.Point(26, 490)
+        Me.mlStatusBar.Location = New System.Drawing.Point(167, 478)
         Me.mlStatusBar.Name = "mlStatusBar"
         Me.mlStatusBar.Size = New System.Drawing.Size(0, 0)
         Me.mlStatusBar.TabIndex = 9
@@ -1826,11 +1839,9 @@ Partial Class ripartoACS
         Me.nupImportoDaRipartire.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.nupImportoDaRipartire.Location = New System.Drawing.Point(454, 64)
         Me.nupImportoDaRipartire.Maximum = New Decimal(New Integer() {99999, 0, 0, 0})
-        Me.nupImportoDaRipartire.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.nupImportoDaRipartire.Name = "nupImportoDaRipartire"
         Me.nupImportoDaRipartire.Size = New System.Drawing.Size(70, 22)
         Me.nupImportoDaRipartire.TabIndex = 0
-        Me.nupImportoDaRipartire.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
         'MetroLabel39
         '
@@ -1841,7 +1852,7 @@ Partial Class ripartoACS
         Me.MetroLabel39.TabIndex = 2
         Me.MetroLabel39.Text = "Importo da ripartire"
         '
-        'ripartoACS
+        'ripartoAS
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -1861,11 +1872,11 @@ Partial Class ripartoACS
         Me.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
-        Me.Name = "ripartoACS"
+        Me.Name = "ripartoAS"
         Me.Resizable = False
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.Style = MetroFramework.MetroColorStyle.Teal
-        Me.Text = "ripartoACS"
+        Me.Text = "ripartoAS"
         CType(Me.nupQTAUnitaImmobiliari, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MetroPanel1.ResumeLayout(False)
         Me.gbUnitaImmobiliare1.ResumeLayout(False)
@@ -2094,4 +2105,5 @@ Partial Class ripartoACS
     Friend WithEvents MetroLabel34 As MetroFramework.Controls.MetroLabel
     Friend WithEvents MetroLabel39 As MetroFramework.Controls.MetroLabel
     Friend WithEvents nupImportoDaRipartire As NumericUpDown
+    Friend WithEvents MetroTile7 As MetroFramework.Controls.MetroTile
 End Class

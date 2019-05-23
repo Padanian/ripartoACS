@@ -1,6 +1,6 @@
 ﻿Imports System.IO
 
-Public Class ripartoACS
+Public Class ripartoAS
 
     Public NomeUnitaImmobiliare As String
     Public mySender As String
@@ -375,181 +375,183 @@ Public Class ripartoACS
         Dim totaleRipartizioneConsumo As Double
         Dim totaleRipartizione As Double
 
+        Try
+            For i = nupQTAUnitaImmobiliari.Minimum To nupQTAUnitaImmobiliari.Value
 
-        For i = nupQTAUnitaImmobiliari.Minimum To nupQTAUnitaImmobiliari.Maximum
+                Dim cell1 As String = DirectCast(Controls.Find("gbUnitaImmobiliare" & i.ToString, True)?(0), GroupBox).Text
+                Dim cell2 As Double = nupImportoDaRipartire.Value * (nupPercentualeMillesimi.Value / 100) * (DirectCast(Controls.Find("nupMillesimi" & i.ToString, True)?(0), NumericUpDown).Value / 1000)
+                Dim cell3 As Double = nupImportoDaRipartire.Value * (nupPercentualeConsumo.Value / 100) * (DirectCast(Controls.Find("nupConsumo" & i.ToString, True)?(0), NumericUpDown).Value / totaleMetriCubi)
+                Dim cell4 As Double = cell2 + cell3
 
-            Dim cell1 As String = DirectCast(Controls.Find("gbUnitaImmobiliare" & i.ToString, True)?(0), GroupBox).Text
-            Dim cell2 As Double = nupImportoDaRipartire.Value * (nupPercentualeMillesimi.Value / 100) * (DirectCast(Controls.Find("nupMillesimi" & i.ToString, True)?(0), NumericUpDown).Value / 1000)
-            Dim cell3 As Double = nupImportoDaRipartire.Value * (nupPercentualeConsumo.Value / 100) * (DirectCast(Controls.Find("nupConsumo" & i.ToString, True)?(0), NumericUpDown).Value / totaleMetriCubi)
-            Dim cell4 As Double = cell2 + cell3
+                totaleRipartizioneMillesimi += cell2
+                totaleRipartizioneConsumo += cell3
+                totaleRipartizione += cell4
 
-            totaleRipartizioneMillesimi += cell2
-            totaleRipartizioneConsumo += cell3
-            totaleRipartizione += cell4
+                newRipartizione.tabellaRipartizione.Rows.Add({cell1, cell2, cell3, cell4})
 
-            newRipartizione.tabellaRipartizione.Rows.Add({cell1, cell2, cell3, cell4})
+            Next
 
-        Next
-
-        newRipartizione.tabellaRipartizione.Rows.Add({"Totali", totaleRipartizioneMillesimi, totaleRipartizioneConsumo, totaleRipartizione})
+            newRipartizione.tabellaRipartizione.Rows.Add({"Totali", totaleRipartizioneMillesimi, totaleRipartizioneConsumo, totaleRipartizione})
 #End Region
 
 
 #Region "ripartizione ARERA"
 
-        For Each col In newRipartizione.tabellaRipartizioneARERA.Columns
-            col.DefaultCellStyle.Format = "€ #.#0"
-        Next
+            For Each col In newRipartizione.tabellaRipartizioneARERA.Columns
+                col.DefaultCellStyle.Format = "€ #.#0"
+            Next
 
-        Dim totaliQuoteFisse As Double
-        Dim totaliAgevolata As Double
-        Dim totaliBase As Double
-        Dim totaliEccedenza As Double
-        Dim totaliEccedenza1 As Double
-        Dim totale As Double
+            Dim totaliQuoteFisse As Double
+            Dim totaliAgevolata As Double
+            Dim totaliBase As Double
+            Dim totaliEccedenza As Double
+            Dim totaliEccedenza1 As Double
+            Dim totale As Double
 
-        For i = nupQTAUnitaImmobiliari.Minimum To nupQTAUnitaImmobiliari.Maximum
+            For i = nupQTAUnitaImmobiliari.Minimum To nupQTAUnitaImmobiliari.Value
 
-            Dim cell1, cell2, cell3, cell4, cell5, cell6 As Double
-            Dim numpersone As Integer = CInt(DirectCast(Controls.Find("cbNumPersone" & i.ToString, True)?(0), ComboBox).Text)
+                Dim cell1, cell2, cell3, cell4, cell5, cell6 As Double
+                Dim numpersone As Integer = CInt(DirectCast(Controls.Find("cbNumPersone" & i.ToString, True)?(0), ComboBox).Text)
 
 
-            If DirectCast(Controls.Find("chkResidente" & i.ToString, True)?(0), CheckBox).Checked Then
+                If DirectCast(Controls.Find("chkResidente" & i.ToString, True)?(0), CheckBox).Checked Then
 
-                cell1 = tariffaResidentiAcquedotto(0, 2) + tariffaResidentiDepurazione(0, 2) + tariffaResidentiFognatura(0, 2)
-                Dim consumo As Double = DirectCast(Controls.Find("nupConsumo" & i.ToString, True)?(0), NumericUpDown).Value
-                Dim consumoAgevolato, consumoBase, consumoEccedenza, consumoEccedenza1 As Double
+                    cell1 = tariffaResidentiAcquedotto(0, 2) + tariffaResidentiDepurazione(0, 2) + tariffaResidentiFognatura(0, 2)
+                    Dim consumo As Double = DirectCast(Controls.Find("nupConsumo" & i.ToString, True)?(0), NumericUpDown).Value
+                    Dim consumoAgevolato, consumoBase, consumoEccedenza, consumoEccedenza1 As Double
 
-                If consumo > tariffaResidentiAcquedotto(0, 1) * numpersone Then
-                    consumoAgevolato = tariffaResidentiAcquedotto(0, 1) * numpersone
-                    If consumo > tariffaResidentiAcquedotto(1, 1) * numpersone Then
-                        consumoBase = (tariffaResidentiAcquedotto(1, 1) - tariffaResidentiAcquedotto(0, 1)) * numpersone
-                        If consumo > tariffaResidentiAcquedotto(2, 1) * numpersone Then
-                            consumoEccedenza = (tariffaResidentiAcquedotto(2, 1) - tariffaResidentiAcquedotto(1, 1)) * numpersone
-                            consumoEccedenza1 = consumo - tariffaResidentiAcquedotto(2, 1) * numpersone
+                    If consumo > tariffaResidentiAcquedotto(0, 1) * numpersone Then
+                        consumoAgevolato = tariffaResidentiAcquedotto(0, 1) * numpersone
+                        If consumo > tariffaResidentiAcquedotto(1, 1) * numpersone Then
+                            consumoBase = (tariffaResidentiAcquedotto(1, 1) - tariffaResidentiAcquedotto(0, 1)) * numpersone
+                            If consumo > tariffaResidentiAcquedotto(2, 1) * numpersone Then
+                                consumoEccedenza = (tariffaResidentiAcquedotto(2, 1) - tariffaResidentiAcquedotto(1, 1)) * numpersone
+                                consumoEccedenza1 = consumo - tariffaResidentiAcquedotto(2, 1) * numpersone
+                            Else
+                                consumoEccedenza = consumo - tariffaResidentiAcquedotto(1, 1) * numpersone
+                                consumoEccedenza1 = 0
+                            End If
                         Else
-                            consumoEccedenza = consumo - tariffaResidentiAcquedotto(1, 1) * numpersone
+                            consumoBase = consumo - tariffaResidentiAcquedotto(0, 1) * numpersone
+                            consumoEccedenza = 0
                             consumoEccedenza1 = 0
                         End If
                     Else
-                        consumoBase = consumo - tariffaResidentiAcquedotto(0, 1) * numpersone
+                        consumoAgevolato = consumo
+                        consumoBase = 0
                         consumoEccedenza = 0
                         consumoEccedenza1 = 0
                     End If
-                Else
-                    consumoAgevolato = consumo
-                    consumoBase = 0
-                    consumoEccedenza = 0
-                    consumoEccedenza1 = 0
-                End If
 
 
 
 #Region "agevolata residenti"
-                Dim tariffaAcquedotto As Double = tariffaResidentiAcquedotto(0, 3) + tariffaResidentiAcquedotto(0, 4) + tariffaResidentiAcquedotto(0, 5) + tariffaResidentiAcquedotto(0, 6)
-                Dim tariffaFognatura As Double = tariffaResidentiFognatura(0, 3) + tariffaResidentiFognatura(0, 4) + tariffaResidentiFognatura(0, 5) + tariffaResidentiFognatura(0, 6)
-                Dim tariffaDepurazione As Double = tariffaResidentiDepurazione(0, 3) + tariffaResidentiDepurazione(0, 4) + tariffaResidentiDepurazione(0, 5) + tariffaResidentiDepurazione(0, 6)
-                cell2 = consumoAgevolato * (tariffaAcquedotto + tariffaFognatura + tariffaDepurazione)
+                    Dim tariffaAcquedotto As Double = tariffaResidentiAcquedotto(0, 3) + tariffaResidentiAcquedotto(0, 4) + tariffaResidentiAcquedotto(0, 5) + tariffaResidentiAcquedotto(0, 6)
+                    Dim tariffaFognatura As Double = tariffaResidentiFognatura(0, 3) + tariffaResidentiFognatura(0, 4) + tariffaResidentiFognatura(0, 5) + tariffaResidentiFognatura(0, 6)
+                    Dim tariffaDepurazione As Double = tariffaResidentiDepurazione(0, 3) + tariffaResidentiDepurazione(0, 4) + tariffaResidentiDepurazione(0, 5) + tariffaResidentiDepurazione(0, 6)
+                    cell2 = consumoAgevolato * (tariffaAcquedotto + tariffaFognatura + tariffaDepurazione)
 #End Region
 
 #Region "base residenti"
-                tariffaAcquedotto = tariffaResidentiAcquedotto(1, 3) + tariffaResidentiAcquedotto(1, 4) + tariffaResidentiAcquedotto(1, 5) + tariffaResidentiAcquedotto(1, 6)
-                tariffaFognatura = tariffaResidentiFognatura(1, 3) + tariffaResidentiFognatura(1, 4) + tariffaResidentiFognatura(1, 5) + tariffaResidentiFognatura(1, 6)
-                tariffaDepurazione = tariffaResidentiDepurazione(1, 3) + tariffaResidentiDepurazione(1, 4) + tariffaResidentiDepurazione(1, 5) + tariffaResidentiDepurazione(1, 6)
-                cell3 = consumoBase * (tariffaAcquedotto + tariffaFognatura + tariffaDepurazione)
+                    tariffaAcquedotto = tariffaResidentiAcquedotto(1, 3) + tariffaResidentiAcquedotto(1, 4) + tariffaResidentiAcquedotto(1, 5) + tariffaResidentiAcquedotto(1, 6)
+                    tariffaFognatura = tariffaResidentiFognatura(1, 3) + tariffaResidentiFognatura(1, 4) + tariffaResidentiFognatura(1, 5) + tariffaResidentiFognatura(1, 6)
+                    tariffaDepurazione = tariffaResidentiDepurazione(1, 3) + tariffaResidentiDepurazione(1, 4) + tariffaResidentiDepurazione(1, 5) + tariffaResidentiDepurazione(1, 6)
+                    cell3 = consumoBase * (tariffaAcquedotto + tariffaFognatura + tariffaDepurazione)
 #End Region
 
 #Region "eccedenza residenti"
-                tariffaAcquedotto = tariffaResidentiAcquedotto(2, 3) + tariffaResidentiAcquedotto(2, 4) + tariffaResidentiAcquedotto(2, 5) + tariffaResidentiAcquedotto(2, 6)
-                tariffaFognatura = tariffaResidentiFognatura(2, 3) + tariffaResidentiFognatura(2, 4) + tariffaResidentiFognatura(2, 5) + tariffaResidentiFognatura(2, 6)
-                tariffaDepurazione = tariffaResidentiDepurazione(2, 3) + tariffaResidentiDepurazione(2, 4) + tariffaResidentiDepurazione(2, 5) + tariffaResidentiDepurazione(2, 6)
-                cell4 = consumoEccedenza * (tariffaAcquedotto + tariffaFognatura + tariffaDepurazione)
+                    tariffaAcquedotto = tariffaResidentiAcquedotto(2, 3) + tariffaResidentiAcquedotto(2, 4) + tariffaResidentiAcquedotto(2, 5) + tariffaResidentiAcquedotto(2, 6)
+                    tariffaFognatura = tariffaResidentiFognatura(2, 3) + tariffaResidentiFognatura(2, 4) + tariffaResidentiFognatura(2, 5) + tariffaResidentiFognatura(2, 6)
+                    tariffaDepurazione = tariffaResidentiDepurazione(2, 3) + tariffaResidentiDepurazione(2, 4) + tariffaResidentiDepurazione(2, 5) + tariffaResidentiDepurazione(2, 6)
+                    cell4 = consumoEccedenza * (tariffaAcquedotto + tariffaFognatura + tariffaDepurazione)
 #End Region
 
 #Region "eccedenza 1 residenti"
-                tariffaAcquedotto = tariffaResidentiAcquedotto(3, 3) + tariffaResidentiAcquedotto(3, 4) + tariffaResidentiAcquedotto(3, 5) + tariffaResidentiAcquedotto(3, 6)
-                tariffaFognatura = tariffaResidentiFognatura(3, 3) + tariffaResidentiFognatura(3, 4) + tariffaResidentiFognatura(3, 5) + tariffaResidentiFognatura(3, 6)
-                tariffaDepurazione = tariffaResidentiDepurazione(3, 3) + tariffaResidentiDepurazione(3, 4) + tariffaResidentiDepurazione(3, 5) + tariffaResidentiDepurazione(3, 6)
-                cell5 = consumoEccedenza1 * (tariffaAcquedotto + tariffaFognatura + tariffaDepurazione)
+                    tariffaAcquedotto = tariffaResidentiAcquedotto(3, 3) + tariffaResidentiAcquedotto(3, 4) + tariffaResidentiAcquedotto(3, 5) + tariffaResidentiAcquedotto(3, 6)
+                    tariffaFognatura = tariffaResidentiFognatura(3, 3) + tariffaResidentiFognatura(3, 4) + tariffaResidentiFognatura(3, 5) + tariffaResidentiFognatura(3, 6)
+                    tariffaDepurazione = tariffaResidentiDepurazione(3, 3) + tariffaResidentiDepurazione(3, 4) + tariffaResidentiDepurazione(3, 5) + tariffaResidentiDepurazione(3, 6)
+                    cell5 = consumoEccedenza1 * (tariffaAcquedotto + tariffaFognatura + tariffaDepurazione)
 #End Region
 
-            Else
+                Else
 
-                cell1 = tariffaNonResidentiAcquedotto(1, 2) + tariffaNonResidentiDepurazione(1, 2) + tariffaNonResidentiFognatura(1, 2)
-                Dim consumo As Double = DirectCast(Controls.Find("nupConsumo" & i.ToString, True)?(0), NumericUpDown).Value
-                Dim consumoAgevolato, consumoBase, consumoEccedenza, consumoEccedenza1 As Double
+                    cell1 = tariffaNonResidentiAcquedotto(1, 2) + tariffaNonResidentiDepurazione(1, 2) + tariffaNonResidentiFognatura(1, 2)
+                    Dim consumo As Double = DirectCast(Controls.Find("nupConsumo" & i.ToString, True)?(0), NumericUpDown).Value
+                    Dim consumoAgevolato, consumoBase, consumoEccedenza, consumoEccedenza1 As Double
 
-                If consumo > tariffaNonResidentiAcquedotto(0, 1) * numpersone Then
-                    consumoAgevolato = tariffaNonResidentiAcquedotto(0, 1) * numpersone
-                    If consumo > tariffaNonResidentiAcquedotto(1, 1) * numpersone Then
-                        consumoBase = (tariffaNonResidentiAcquedotto(1, 1) - tariffaNonResidentiAcquedotto(0, 1)) * numpersone
-                        If consumo > tariffaNonResidentiAcquedotto(2, 1) * numpersone Then
-                            consumoEccedenza = (tariffaNonResidentiAcquedotto(2, 1) - tariffaNonResidentiAcquedotto(1, 1)) * numpersone
-                            consumoEccedenza1 = consumo - tariffaNonResidentiAcquedotto(2, 1) * numpersone
+                    If consumo > tariffaNonResidentiAcquedotto(0, 1) * numpersone Then
+                        consumoAgevolato = tariffaNonResidentiAcquedotto(0, 1) * numpersone
+                        If consumo > tariffaNonResidentiAcquedotto(1, 1) * numpersone Then
+                            consumoBase = (tariffaNonResidentiAcquedotto(1, 1) - tariffaNonResidentiAcquedotto(0, 1)) * numpersone
+                            If consumo > tariffaNonResidentiAcquedotto(2, 1) * numpersone Then
+                                consumoEccedenza = (tariffaNonResidentiAcquedotto(2, 1) - tariffaNonResidentiAcquedotto(1, 1)) * numpersone
+                                consumoEccedenza1 = consumo - tariffaNonResidentiAcquedotto(2, 1) * numpersone
+                            Else
+                                consumoEccedenza = consumo - tariffaNonResidentiAcquedotto(1, 1) * numpersone
+                                consumoEccedenza1 = 0
+                            End If
                         Else
-                            consumoEccedenza = consumo - tariffaNonResidentiAcquedotto(1, 1) * numpersone
+                            consumoBase = consumo - tariffaNonResidentiAcquedotto(0, 1) * numpersone
+                            consumoEccedenza = 0
                             consumoEccedenza1 = 0
                         End If
                     Else
-                        consumoBase = consumo - tariffaNonResidentiAcquedotto(0, 1) * numpersone
+                        consumoAgevolato = consumo
+                        consumoBase = 0
                         consumoEccedenza = 0
                         consumoEccedenza1 = 0
                     End If
-                Else
-                    consumoAgevolato = consumo
-                    consumoBase = 0
-                    consumoEccedenza = 0
-                    consumoEccedenza1 = 0
-                End If
 
 
 
 #Region "agevolata NonResidenti"
-                Dim tariffaAcquedotto As Double = tariffaNonResidentiAcquedotto(0, 3) + tariffaNonResidentiAcquedotto(0, 4) + tariffaNonResidentiAcquedotto(0, 5) + tariffaNonResidentiAcquedotto(0, 6)
-                Dim tariffaFognatura As Double = tariffaNonResidentiFognatura(0, 3) + tariffaNonResidentiFognatura(0, 4) + tariffaNonResidentiFognatura(0, 5) + tariffaNonResidentiFognatura(0, 6)
-                Dim tariffaDepurazione As Double = tariffaNonResidentiDepurazione(0, 3) + tariffaNonResidentiDepurazione(0, 4) + tariffaNonResidentiDepurazione(0, 5) + tariffaNonResidentiDepurazione(0, 6)
-                cell2 = consumoAgevolato * (tariffaAcquedotto + tariffaFognatura + tariffaDepurazione)
+                    Dim tariffaAcquedotto As Double = tariffaNonResidentiAcquedotto(0, 3) + tariffaNonResidentiAcquedotto(0, 4) + tariffaNonResidentiAcquedotto(0, 5) + tariffaNonResidentiAcquedotto(0, 6)
+                    Dim tariffaFognatura As Double = tariffaNonResidentiFognatura(0, 3) + tariffaNonResidentiFognatura(0, 4) + tariffaNonResidentiFognatura(0, 5) + tariffaNonResidentiFognatura(0, 6)
+                    Dim tariffaDepurazione As Double = tariffaNonResidentiDepurazione(0, 3) + tariffaNonResidentiDepurazione(0, 4) + tariffaNonResidentiDepurazione(0, 5) + tariffaNonResidentiDepurazione(0, 6)
+                    cell2 = consumoAgevolato * (tariffaAcquedotto + tariffaFognatura + tariffaDepurazione)
 #End Region
 
 #Region "base NonResidenti"
-                tariffaAcquedotto = tariffaNonResidentiAcquedotto(1, 3) + tariffaNonResidentiAcquedotto(1, 4) + tariffaNonResidentiAcquedotto(1, 5) + tariffaNonResidentiAcquedotto(1, 6)
-                tariffaFognatura = tariffaNonResidentiFognatura(1, 3) + tariffaNonResidentiFognatura(1, 4) + tariffaNonResidentiFognatura(1, 5) + tariffaNonResidentiFognatura(1, 6)
-                tariffaDepurazione = tariffaNonResidentiDepurazione(1, 3) + tariffaNonResidentiDepurazione(1, 4) + tariffaNonResidentiDepurazione(1, 5) + tariffaNonResidentiDepurazione(1, 6)
-                cell3 = consumoBase * (tariffaAcquedotto + tariffaFognatura + tariffaDepurazione)
+                    tariffaAcquedotto = tariffaNonResidentiAcquedotto(1, 3) + tariffaNonResidentiAcquedotto(1, 4) + tariffaNonResidentiAcquedotto(1, 5) + tariffaNonResidentiAcquedotto(1, 6)
+                    tariffaFognatura = tariffaNonResidentiFognatura(1, 3) + tariffaNonResidentiFognatura(1, 4) + tariffaNonResidentiFognatura(1, 5) + tariffaNonResidentiFognatura(1, 6)
+                    tariffaDepurazione = tariffaNonResidentiDepurazione(1, 3) + tariffaNonResidentiDepurazione(1, 4) + tariffaNonResidentiDepurazione(1, 5) + tariffaNonResidentiDepurazione(1, 6)
+                    cell3 = consumoBase * (tariffaAcquedotto + tariffaFognatura + tariffaDepurazione)
 #End Region
 
 #Region "eccedenza NonResidenti"
-                tariffaAcquedotto = tariffaNonResidentiAcquedotto(2, 3) + tariffaNonResidentiAcquedotto(2, 4) + tariffaNonResidentiAcquedotto(2, 5) + tariffaNonResidentiAcquedotto(2, 6)
-                tariffaFognatura = tariffaNonResidentiFognatura(2, 3) + tariffaNonResidentiFognatura(2, 4) + tariffaNonResidentiFognatura(2, 5) + tariffaNonResidentiFognatura(2, 6)
-                tariffaDepurazione = tariffaNonResidentiDepurazione(2, 3) + tariffaNonResidentiDepurazione(2, 4) + tariffaNonResidentiDepurazione(2, 5) + tariffaNonResidentiDepurazione(2, 6)
-                cell4 = consumoEccedenza * (tariffaAcquedotto + tariffaFognatura + tariffaDepurazione)
+                    tariffaAcquedotto = tariffaNonResidentiAcquedotto(2, 3) + tariffaNonResidentiAcquedotto(2, 4) + tariffaNonResidentiAcquedotto(2, 5) + tariffaNonResidentiAcquedotto(2, 6)
+                    tariffaFognatura = tariffaNonResidentiFognatura(2, 3) + tariffaNonResidentiFognatura(2, 4) + tariffaNonResidentiFognatura(2, 5) + tariffaNonResidentiFognatura(2, 6)
+                    tariffaDepurazione = tariffaNonResidentiDepurazione(2, 3) + tariffaNonResidentiDepurazione(2, 4) + tariffaNonResidentiDepurazione(2, 5) + tariffaNonResidentiDepurazione(2, 6)
+                    cell4 = consumoEccedenza * (tariffaAcquedotto + tariffaFognatura + tariffaDepurazione)
 #End Region
 
 #Region "eccedenza 1 NonResidenti"
-                tariffaAcquedotto = tariffaNonResidentiAcquedotto(3, 3) + tariffaNonResidentiAcquedotto(3, 4) + tariffaNonResidentiAcquedotto(3, 5) + tariffaNonResidentiAcquedotto(3, 6)
-                tariffaFognatura = tariffaNonResidentiFognatura(3, 3) + tariffaNonResidentiFognatura(3, 4) + tariffaNonResidentiFognatura(3, 5) + tariffaNonResidentiFognatura(3, 6)
-                tariffaDepurazione = tariffaNonResidentiDepurazione(3, 3) + tariffaNonResidentiDepurazione(3, 4) + tariffaNonResidentiDepurazione(3, 5) + tariffaNonResidentiDepurazione(3, 6)
-                cell5 = consumoEccedenza1 * (tariffaAcquedotto + tariffaFognatura + tariffaDepurazione)
+                    tariffaAcquedotto = tariffaNonResidentiAcquedotto(3, 3) + tariffaNonResidentiAcquedotto(3, 4) + tariffaNonResidentiAcquedotto(3, 5) + tariffaNonResidentiAcquedotto(3, 6)
+                    tariffaFognatura = tariffaNonResidentiFognatura(3, 3) + tariffaNonResidentiFognatura(3, 4) + tariffaNonResidentiFognatura(3, 5) + tariffaNonResidentiFognatura(3, 6)
+                    tariffaDepurazione = tariffaNonResidentiDepurazione(3, 3) + tariffaNonResidentiDepurazione(3, 4) + tariffaNonResidentiDepurazione(3, 5) + tariffaNonResidentiDepurazione(3, 6)
+                    cell5 = consumoEccedenza1 * (tariffaAcquedotto + tariffaFognatura + tariffaDepurazione)
 #End Region
 
-            End If
+                End If
 
 
-            totaliQuoteFisse += cell1
-            totaliAgevolata += cell2
-            totaliBase += cell3
-            totaliEccedenza += cell4
-            totaliEccedenza1 += cell5
-            cell6 = cell1 + cell2 + cell3 + cell4 + cell5
-            totale += cell6
+                totaliQuoteFisse += cell1
+                totaliAgevolata += cell2
+                totaliBase += cell3
+                totaliEccedenza += cell4
+                totaliEccedenza1 += cell5
+                cell6 = cell1 + cell2 + cell3 + cell4 + cell5
+                totale += cell6
 
-            newRipartizione.tabellaRipartizioneARERA.Rows.Add({cell1, cell2, cell3, cell4, cell5, cell6})
+                newRipartizione.tabellaRipartizioneARERA.Rows.Add({cell1, cell2, cell3, cell4, cell5, cell6})
 
-        Next
+            Next
 
-        newRipartizione.tabellaRipartizioneARERA.Rows.Add({totaliQuoteFisse, totaliAgevolata, totaliBase, totaliEccedenza, totaliEccedenza1, totale})
+            newRipartizione.tabellaRipartizioneARERA.Rows.Add({totaliQuoteFisse, totaliAgevolata, totaliBase, totaliEccedenza, totaliEccedenza1, totale})
 
+        Catch ex As exception
 
+        End Try
 
 
 #End Region
@@ -604,7 +606,7 @@ Public Class ripartoACS
         TimerStatusbar.Enabled = False
     End Sub
 
-    Private Sub RipartoACS_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub ripartoAS_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         For i = nupQTAUnitaImmobiliari.Minimum To nupQTAUnitaImmobiliari.Maximum
             If DirectCast(Controls.Find("cbNumPersone" & i.ToString, True)?(0), ComboBox).SelectedIndex = -1 Then
@@ -630,5 +632,10 @@ Public Class ripartoACS
                 End If
             Next
         End If
+    End Sub
+
+    Private Sub MetroTile7_Click(sender As Object, e As EventArgs) Handles MetroTile7.Click
+        Dim about As Form = New formAboutBox
+        about.ShowDialog()
     End Sub
 End Class

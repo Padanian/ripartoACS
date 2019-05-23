@@ -40,10 +40,10 @@ Partial Class formTariffe
         Me.MetroLabel30 = New MetroFramework.Controls.MetroLabel()
         Me.MetroLabel29 = New MetroFramework.Controls.MetroLabel()
         Me.MetroLabel28 = New MetroFramework.Controls.MetroLabel()
-        Me.RipartoACSBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ripartoASBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.mtSalvaTariffe = New MetroFramework.Controls.MetroTile()
         CType(Me.MetroGrid, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RipartoACSBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ripartoASBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MetroGrid
@@ -218,7 +218,7 @@ Partial Class formTariffe
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.Text = "Tariffe"
         CType(Me.MetroGrid, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RipartoACSBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ripartoASBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -229,7 +229,7 @@ Partial Class formTariffe
     Friend WithEvents MetroLabel30 As MetroFramework.Controls.MetroLabel
     Friend WithEvents MetroLabel29 As MetroFramework.Controls.MetroLabel
     Friend WithEvents MetroLabel28 As MetroFramework.Controls.MetroLabel
-    Friend WithEvents RipartoACSBindingSource As BindingSource
+    Friend WithEvents ripartoASBindingSource As BindingSource
     Friend WithEvents mtSalvaTariffe As MetroFramework.Controls.MetroTile
     Friend WithEvents daMC As DataGridViewTextBoxColumn
     Friend WithEvents aMC As DataGridViewTextBoxColumn

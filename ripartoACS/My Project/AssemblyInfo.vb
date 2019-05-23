@@ -8,12 +8,12 @@ Imports System.Runtime.InteropServices
 
 ' Controllare i valori degli attributi degli assembly
 
-<Assembly: AssemblyTitle("ripartoACS")>
-<Assembly: AssemblyDescription("")>
-<Assembly: AssemblyCompany("")>
-<Assembly: AssemblyProduct("ripartoACS")>
-<Assembly: AssemblyCopyright("Copyright ©  2019")>
-<Assembly: AssemblyTrademark("")>
+<Assembly: AssemblyTitle("Riparto acqua sanitaria")>
+<Assembly: AssemblyDescription("Software per la ripartizione dell'acqua sanitaria nei condomini fino a 12 unità immobiliari.")>
+<Assembly: AssemblyCompany("Coster Group Srl")>
+<Assembly: AssemblyProduct("Riparto acqua sanitaria")>
+<Assembly: AssemblyCopyright("Copyright Alessandro Mandelli ©  2019")>
+<Assembly: AssemblyTrademark("ripartoAS")>
 
 <Assembly: ComVisible(False)>
 
@@ -31,5 +31,5 @@ Imports System.Runtime.InteropServices
 ' usando l'asterisco '*' come illustrato di seguito:
 ' <Assembly: AssemblyVersion("1.0.*")>
 
-<Assembly: AssemblyVersion("1.0.0.0")>
-<Assembly: AssemblyFileVersion("1.0.0.0")>
+<Assembly: AssemblyVersion("0.1.0.0")>
+<Assembly: AssemblyFileVersion("0.1.0.0")>

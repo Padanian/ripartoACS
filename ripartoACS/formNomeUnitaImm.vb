@@ -9,13 +9,13 @@ Public Class formNomeUnitaImm
     ' quali il nome utente, il nome visualizzato e così via.
 
     Private Sub OK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK.Click
-        ripartoACS.NomeUnitaImmobiliare = tbNomeUnitaImm.Text
+        ripartoAS.NomeUnitaImmobiliare = tbNomeUnitaImm.Text
         Me.DialogResult = DialogResult.OK
         Me.Close()
     End Sub
 
     Private Sub Cancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cancel.Click
-        ripartoACS.NomeUnitaImmobiliare = ""
+        ripartoAS.NomeUnitaImmobiliare = ""
         Me.DialogResult = DialogResult.Cancel
         Me.Close()
     End Sub

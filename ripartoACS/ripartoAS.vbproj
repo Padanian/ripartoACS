@@ -6,9 +6,9 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{296B8561-BF7C-45D7-848B-BA1120EB454C}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>ripartoACS.My.MyApplication</StartupObject>
-    <RootNamespace>ripartoACS</RootNamespace>
-    <AssemblyName>ripartoACS</AssemblyName>
+    <StartupObject>ripartoAS.My.MyApplication</StartupObject>
+    <RootNamespace>ripartoAS</RootNamespace>
+    <AssemblyName>ripartoAS</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
@@ -22,7 +22,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>ripartoACS.xml</DocumentationFile>
+    <DocumentationFile>ripartoAS.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -32,7 +32,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>ripartoACS.xml</DocumentationFile>
+    <DocumentationFile>ripartoAS.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -76,6 +76,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="formAboutBox.Designer.vb">
+      <DependentUpon>formAboutBox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formAboutBox.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="formNomeUnitaImm.Designer.vb">
       <DependentUpon>formNomeUnitaImm.vb</DependentUpon>
     </Compile>
@@ -94,11 +100,11 @@
     <Compile Include="formTariffe.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ripartoACS.vb">
+    <Compile Include="ripartoAS.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ripartoACS.Designer.vb">
-      <DependentUpon>ripartoACS.vb</DependentUpon>
+    <Compile Include="ripartoAS.Designer.vb">
+      <DependentUpon>ripartoAS.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -118,6 +124,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="formAboutBox.resx">
+      <DependentUpon>formAboutBox.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formNomeUnitaImm.resx">
       <DependentUpon>formNomeUnitaImm.vb</DependentUpon>
     </EmbeddedResource>
@@ -127,8 +136,8 @@
     <EmbeddedResource Include="formTariffe.resx">
       <DependentUpon>formTariffe.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ripartoACS.resx">
-      <DependentUpon>ripartoACS.vb</DependentUpon>
+    <EmbeddedResource Include="ripartoAS.resx">
+      <DependentUpon>ripartoAS.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
