@@ -23,6 +23,7 @@ Partial Class formNomeUnitaImm
     'Non modificarla mediante l'editor del codice.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(formNomeUnitaImm))
         Me.tbNomeUnitaImm = New MetroFramework.Controls.MetroTextBox()
         Me.OK = New MetroFramework.Controls.MetroTile()
         Me.Cancel = New MetroFramework.Controls.MetroTile()
@@ -47,7 +48,7 @@ Partial Class formNomeUnitaImm
         Me.tbNomeUnitaImm.MaxLength = 32767
         Me.tbNomeUnitaImm.Name = "tbNomeUnitaImm"
         Me.tbNomeUnitaImm.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.tbNomeUnitaImm.PromptText = "Inserire nome unità immobiliare..."
+        Me.tbNomeUnitaImm.WaterMark = "Inserire nome unità immobiliare..."
         Me.tbNomeUnitaImm.ScrollBars = System.Windows.Forms.ScrollBars.None
         Me.tbNomeUnitaImm.SelectedText = ""
         Me.tbNomeUnitaImm.SelectionLength = 0
@@ -94,6 +95,7 @@ Partial Class formNomeUnitaImm
         Me.Controls.Add(Me.tbNomeUnitaImm)
         Me.DisplayHeader = False
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.KeyPreview = True
         Me.MaximizeBox = False
         Me.MinimizeBox = False

@@ -23,6 +23,7 @@ Partial Class ripartoACS
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ripartoACS))
         Me.nupQTAUnitaImmobiliari = New System.Windows.Forms.NumericUpDown()
         Me.MetroPanel1 = New MetroFramework.Controls.MetroPanel()
         Me.MetroTile3 = New MetroFramework.Controls.MetroTile()
@@ -1858,6 +1859,7 @@ Partial Class ripartoACS
         Me.Controls.Add(Me.nupQTAUnitaImmobiliari)
         Me.Controls.Add(Me.mpConfigurazioneRiparto)
         Me.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "ripartoACS"
         Me.Resizable = False
